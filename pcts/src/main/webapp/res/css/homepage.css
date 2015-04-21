@@ -1,0 +1,320 @@
+@CHARSET "UTF-8";
+/* ---------------------------ext css patch------------------------------- */
+.x-tree-node-collapsed .x-tree-node-icon, .x-tree-node-expanded .x-tree-node-icon, .x-tree-node-leaf .x-tree-node-icon{
+	height: 16px;
+}
+
+.x-btn button {
+    font-size: 12px;
+}
+.x-toolbar span {
+	font-size: 12px;
+}
+
+
+.x-tab-strip span.x-tab-strip-text {
+	font-size: 12px;
+}
+div, h1, h2, h3, h4, p, form, label, input,select, textarea, img, span, dl, dt, dd{margin:0; padding:0; font-size:12px; font-weight: normal}
+ul,li{margin:0; padding:0;list-style-type:none;font-size:12;line-height:0px;}
+/* 背景色 */
+.x-border-layout-ct {
+	background-color: #154d8d;
+}
+/* 折叠后的分隔条背景色 */
+.x-layout-collapsed {
+	background-color: #154d8d;
+}
+.x-layout-collapsed-over {
+	background-color: #154d8d;
+}
+/* 导航栏标题 */
+.x-panel-header {
+	/*background-image:url();*/
+	background-color: #fff;
+}
+/* 标签页自定义按钮-最大化还原 */
+a.x-tab-strip-resize-max {
+	background-position: 0 -30px;
+}
+a.x-tab-strip-resize-normal {
+	background-position: 0 -45px;
+}
+a.x-tab-strip-resize {
+    opacity:.6;
+    -moz-opacity:.6;
+    background-repeat:no-repeat;
+	overflow:hidden;
+	width:15px;
+    height:15px;
+    position:absolute;
+    top:4px;
+    right:37px;
+    cursor:pointer;
+    z-index:2;
+}
+
+a.x-tab-strip-resize:hover {
+    opacity:1;
+    -moz-opacity:1;
+}
+
+a.x-tab-strip-resize {
+	background-image:url(../libs/ext/3.4/resources/images/default/panel/tool-sprites.gif);
+}
+/* 标签页自定义按钮-刷新 */
+a.x-tab-strip-refresh {
+    opacity:.6;
+    -moz-opacity:.6;
+    background-repeat:no-repeat;
+    background-position: 0 -225px;
+	overflow:hidden;
+	width:15px;
+    height:15px;
+    position:absolute;
+    top:4px;
+    right:20px;
+    cursor:pointer;
+    z-index:2;
+}
+a.x-tab-strip-refresh:hover {
+    opacity:1;
+    -moz-opacity:1;
+}
+a.x-tab-strip-refresh {
+	background-image:url(../libs/ext/3.4/resources/images/default/panel/tool-sprites.gif);
+}
+/* 标签页自定义按钮-关闭 */
+.x-tab-strip .x-tab-strip-closable a.x-tab-strip-close {
+    opacity:.6;
+    -moz-opacity:.6;
+    background-repeat:no-repeat;
+    background-position: 0 0;
+	overflow:hidden;
+	width:15px;
+    height:15px;
+    position:absolute;
+    top:4px;
+    right:3px;
+    cursor:pointer;
+    z-index:2;
+}
+.x-tab-strip .x-tab-strip-closable a.x-tab-strip-close {
+	background-image:url(../libs/ext/3.4/resources/images/default/panel/tool-sprites.gif);
+}
+.x-tab-strip .x-tab-strip-closable a.x-tab-strip-close:hover{
+	background-image:url(../libs/ext/3.4/resources/images/default/panel/tool-sprites.gif);
+}
+/* 消息框  */
+/*-------------------------------------------------------*/
+.message-box {
+	float:right;
+	width:490px;
+	display:block;
+	z-index:8999;
+	position:relative;
+	padding:0 0 0 0;
+	margin:0 0 0 0;
+}
+
+#mini-box{
+	height:19px;
+	background:#154d8d url(../images/homepage/chat.png) top left no-repeat;
+}
+
+#mini-box-context{
+	height:16px;
+	margin-top:3px;
+	overflow: hidden;
+	padding-left:18px;
+	display:block;
+	width:454px;
+	float:right;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	color:#c9e4fa;
+}
+
+#mini-box-button{
+	height:18px;
+	margin-top:1px;
+	overflow: hidden;
+	display:block;
+	width:18px;
+
+	float:right;
+	background-image:url(../images/homepage/down.png);
+	background-position:top left;
+	background-repeat:no-repeat;
+	cursor:pointer;
+}
+/*-------------------------------------------------------*/
+#dropdown-box{
+	height:300px;
+	display:none;
+}
+
+#dropdown-box-top{
+	display:block;
+	height:19px;
+	background:url(../images/homepage/msg-top.jpg) top left no-repeat;
+}
+
+.dropdown-box-context{
+	height:245px;
+	list-style:none;
+	background-color:#228AC7;
+	padding:0 0 0 0;
+	margin:0 16px 0 20px;
+	width:454px;
+	overflow: hidden;
+}
+
+.context-item {
+	line-height:24px;
+	margin-left:2px;
+	overflow:hidden;
+	width:452px;
+	display:block;
+}
+
+.context-sys-item{
+	background:url(../images/homepage/msg-item-2.jpg) no-repeat center left;
+	color:#fff;
+}
+
+.context-user-item{
+	background:url(../images/homepage/msg-item-1.jpg) no-repeat center left;
+	color:#000;
+}
+
+.context-item span{
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+	width:400px; 
+	margin-left:26px; 
+	display:block; 
+	float:right;
+}
+
+.context-item a{
+	float:right; 
+	width:24px; 
+	height:24px; 
+	display:block;
+}
+
+.context-user-item a{
+	background:url(../images/homepage/msg-show-detail.png) center center no-repeat; 
+}
+
+.context-sys-item a{
+	background:url(../images/homepage/msg-execute.png) center center no-repeat; 
+}
+
+#context-detail-top{
+	background:url(../images/homepage/msg-detail-top.gif) top left no-repeat;
+	width:427px;
+	height:10px;
+	margin-left:14px;
+	display:block;
+	line-height:0px;
+	font-size:0px;
+}
+#context-detail-bottom{
+	background:url(../images/homepage/msg-detail-bottom.gif) top left no-repeat;
+	width:427px;
+	height:6px;
+	margin-left:14px;
+	display:block;
+	line-height:0px;
+}
+
+#context-detail-center{
+	background-color:#fff;
+	width:427px;
+	margin-left:14px;
+	display:block;
+
+	white-space:normal;
+	word-break:break-all;
+	word-spacing:normal;
+	word-wrap:break-word;
+}
+
+#context-detail-center div{
+	margin-left:5px;
+	margin-right:5px;
+}
+
+#dropdown-box-bottom{
+	display:block;
+	height:28px;
+	padding:0 0 0 0;
+	margin:0 16px 0 20px;
+	background:url(../images/homepage/msg-bottom.gif) top left no-repeat;
+}
+
+#dropdown-box-bottom a{color:#fff;}
+/*-------------------------------------------------------*/
+/* footer */
+.footer{ width:100%; height:16px; overflow:hidden; padding-top:4px; text-align:center; clear:both;}
+.footer span{vertical-align:middle;color:#4b92e3}
+#nameUser{color:#4b92e3}
+/* 显示Logo 按钮 */
+#show-logo {
+	width:16px;
+	height:16px;
+	background-color:#154d8d;
+    opacity:.6;
+    -moz-opacity:.6;
+    background-repeat:no-repeat;
+    background-position: top left;
+    background-image:url(../images/homepage/fill.gif);
+	overflow:hidden;
+    cursor:pointer;
+    float:left;
+}
+#show-logo:hover {
+    opacity:1;
+    -moz-opacity:1;
+}
+/* 功能导航树图标 */
+.x-tree-node-leaf .x-tree-node-icon {
+	background-image: url(../libs/ext/3.4/resources/images/default/tree/folder.gif);
+}
+.function-node {
+	background-image:url(../images/homepage/puzzle.png) !important;
+}
+
+/*!
+ * Ext JS Library 3.3.0
+ * Copyright(c) 2006-2010 Ext JS, Inc.
+ * licensing@extjs.com
+ * http://www.extjs.com/license
+ */
+.x-tab-scroller-right-over {
+    background-position: -18px 0;
+}
+/*tab-scroller-menu.gif*/
+.x-tab-tabmenu-right {
+    background: transparent url(../images/homepage/add.png) no-repeat 0 0;
+    border-bottom: 1px solid #8db2e3;
+    width:18px;
+    position:absolute;
+    right:0;
+    top:0;
+    z-index:10;
+    cursor:pointer;
+}
+.x-tab-tabmenu-over {
+    background-position: -18px 0;
+}
+.x-tab-tabmenu-disabled {
+    background-position: 0 0;
+    opacity:.5;
+    -moz-opacity:.5;
+    filter:alpha(opacity=50);
+    cursor:default;
+}

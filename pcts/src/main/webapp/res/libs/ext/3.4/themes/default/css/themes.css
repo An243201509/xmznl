@@ -1,0 +1,582 @@
+body {
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif,'宋体','黑体','微软雅黑';
+	/* color: #000000; */
+}
+
+table td {
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif,'宋体','黑体','微软雅黑';
+	/* color: #000000; */
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+	-moz-outline-style: none;
+}
+
+a:focus { 
+	outline: 0; 
+}
+
+a img{
+	border: none;
+}
+
+/**********************
+ 	修正字体
+***********************/
+.x-grid3-hd-row TD {
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif,'宋体','黑体','微软雅黑';
+	color: #000000;
+}
+
+.x-btn button {
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif,'宋体','黑体','微软雅黑';
+	color: #000000;
+}
+
+.x-fieldset LEGEND {
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif,'宋体','黑体','微软雅黑';
+}
+
+.x-panel-header {
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif,'宋体','黑体','微软雅黑';
+}
+
+.x-toolbar DIV {
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif,'宋体','黑体','微软雅黑';
+}
+
+.x-grid3-row td, .x-grid3-summary-row td {
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif,'宋体','黑体','微软雅黑';
+}
+/**********************
+ 	End 修正字体
+***********************/
+
+/** 金额输入框，字体靠右显示 **/
+.x-form-num-field {
+	text-align:right;
+}
+
+.x-panel-collapsed-text{  
+	font-size: 12px;
+	font-weight:bold;
+	color:#15428b;
+	border:0 none;
+	margin:3px;
+	background-image:none;  
+}
+
+.x-btn-focus {
+	border: 1px solid #02BCFF;
+}
+
+.x-form-focus, textarea.x-form-focus{
+    border: 1px solid;
+}
+
+.x-form-field-trigger-wrap .x-form-focus {
+	border-right: none;
+}
+
+.x-form-focus, textarea.x-form-focus{
+	border-color: #02BCFF !important;
+}
+
+.x-form-invalid, textarea.x-form-invalid {
+    background-color:#fff;
+	border-color:#c30;
+}
+
+.x-tbar-loading {
+	background: url(../images/grid/refresh.gif) !important;
+}
+
+.x-grid3-locked {
+	border-right: 0px solid transparent !important;
+}
+
+.x-progress-text, .x-progress-text-back{
+	color: #000000;
+}
+
+.x-treegrid .x-tree-node-el {
+	/* line-height: inherit; */
+}
+
+.x-treegrid .x-tree-node-td .x-grid3-cell-inner {
+	PADDING: 0px;
+}
+
+.x-grid3-td-checker .x-grid3-col-checker {
+	height: auto !important;
+}
+/** 让grid行中的内容垂直居中 2012-11-23 **/
+.x-grid3-col td, .x-grid3-row td {
+	vertical-align: middle;
+}
+
+.x-grid3-cell-inner .x-tree-icon {
+	PADDING-TOP: 3px;
+}
+
+.x-grid3-cell-inner .x-tree-ec-icon {
+	PADDING-TOP: 3px;
+}
+
+.x-grid3-cell-inner .x-tree-node-anchor {
+	PADDING: 3px 3px 3px 2px
+}
+
+.x-treegrid .x-tree-icon, 
+.x-treegrid .x-tree-ec-icon, 
+.x-treegrid .x-tree-elbow-line, 
+.x-treegrid .x-tree-elbow, 
+.x-treegrid .x-tree-elbow-end, 
+.x-treegrid .x-tree-elbow-plus, 
+.x-treegrid .x-tree-elbow-minus, 
+.x-treegrid .x-tree-elbow-end-plus, 
+.x-treegrid .x-tree-elbow-end-minus {
+	height: 15px;
+}
+
+.x-fieldset{
+	margin-bottom:0px;
+}
+
+.x-form-text, textarea.x-form-field {
+    background-color:#fff;
+    background-image:none;
+    border-color:#E7E7E7;
+}
+
+.x-form-invalid, textarea.x-form-invalid {
+    background-color:#fff;
+    background-image:url(../images/grid/invalid_line.gif);
+    border-color:#c30;
+}
+
+/********************************************
+	Ext.form.Field
+ ********************************************/
+
+/* 2013-2-18 影响form正常布局，同时注释的是sofa/themes.css .sofa-form-table td padding-bottom: 4px;
+.x-form-item {
+	margin-bottom: 0px;
+} */
+
+.ext-form .x-border-layout-ct {
+	background-color: #ffffff;
+}
+
+.x-form-field-readOnly {
+ 	border-color: #E7E7E7 !important;
+  	color: #525252 !important;
+}
+
+.x-field-asterisk {
+	color: red;
+	vertical-align:middle;
+	width:7px;
+	margin-right:4px;
+}
+
+.x-field-label {
+	
+}
+
+.x-field-tail {
+	margin-left: 2px;
+	vertical-align: middle;
+	position: static;
+}
+
+.x-form-tail-trigger {
+	position: absolute;
+	display: block;
+	right: 0px;
+	top: 0px;
+}
+
+.x-field-non-blank {
+	/* background-color: #9C9E9C; */
+}
+
+.x-field-invalid .x-tip-body {
+	padding: 5px;
+	color: #FF3333;
+}
+
+/**********************************
+	Ext Toolbar
+**********************************/
+.x-panel-noborder .x-panel-bbar-noborder .x-toolbar {
+    border-top-color:#87a1bf;
+    background: url("../images/toolbar/bg.gif");
+}
+.x-status-view, textarea.x-form-field.x-status-view {
+	color: gray;
+}
+.x-toolbar-enter {
+	background:url('../images/grid/ok.gif') no-repeat !important;
+}
+/**********************************
+	Ext GridView
+**********************************/
+.x-grid3-header-offset{
+	width:auto;
+}
+
+.x-grid-col-top {
+	background:url('../images/grid/grid_col.gif') 0 0px !important;
+}
+.x-grid-col-up {
+	background:url('../images/grid/grid_col.gif') 0 -16px !important;
+}
+.x-grid-col-from {
+	background:url('../images/grid/grid_col.gif') 0 -32px !important;
+}
+.x-grid-col-to {
+	background:url('../images/grid/grid_col.gif') 0 -48px !important;
+}
+.x-grid-col-down {
+	background:url('../images/grid/grid_col.gif') 0 -64px !important;
+}
+.x-grid-col-bottom {
+	background:url('../images/grid/grid_col.gif') 0 -80px !important;
+}
+
+/** Ext.grid.ColumnHeaderGroup **/
+td.grid-hd-group-cell {
+    background: url(../images/grid/grid3-hrow.gif) repeat-x bottom;
+}
+
+td.ux-grid-hd-group-cell {
+    background:  url(../images/grid/grid3-hrow.gif) repeat-x bottom;
+}
+
+/*****************************************************************
+	放大镜及数字大写功能
+*****************************************************************/
+.x-zoom-lt { 
+	width:6px; height:6px; 
+	background:url(../images/form/zoom_leftTop.gif) no-repeat;
+}
+.x-zoom-t {
+	height:6px; 
+	background:url(../images/form/zoom_top.gif) repeat-x bottom;
+}
+.x-zoom-rt {
+	width:5px; height:6px; 
+	background:url(../images/form/zoom_rightTop.gif) no-repeat bottom;
+}
+.x-zoom-l {
+	width:6px;
+	background:url(../images/form/zoom_left.gif) repeat-y;
+}
+.x-zoom-ct {
+	background:#f1f8ff;
+	padding-right:2px;
+}
+.x-zoom-r {
+	width:5px; 
+	background:url(../images/form/zoom_right.gif) repeat-y;
+}
+.x-zoom-lb {
+	width:6px; height:11px; 
+	background:url(../images/form/zoom_leftBottom.gif) no-repeat;
+}
+.x-zoom-b {
+	height:11px; 
+	background:url(../images/form/zoom_bottom.gif) repeat-x top;
+}
+.x-zoom-rb {
+	background:url(../images/form/zoom_rightBottom.gif) no-repeat top;
+}
+.x-zoom-below .x-zoom-lt {
+	width:6px; height:11px; 
+	background:url(../images/form/zoom_below_leftTop.gif) no-repeat;
+}
+.x-zoom-below .x-zoom-lb{
+	width:6px; height:6px; 
+	background:url(../images/form/zoom_below_leftBottom.gif) no-repeat;
+}
+.x-zoom-below .x-zoom-b, .x-zoom-below .x-zoom-rb{
+	height:6px;
+} 
+.x-zoom-lower {
+	color: #B00000;
+	font: bold 20px/20px '微软雅黑';
+}
+.x-zoom-upper{
+	font: bold 14px/20px '微软雅黑';
+	color:#777;
+}
+
+/*****************************************************************
+	Ext.form.SpinnerField
+*****************************************************************/
+.x-form-spinner-proxy {
+	/*background-color:#ff00cc;*/
+}
+
+.x-form-field-wrap .x-form-spinner-trigger {
+    background:transparent url('../images/form/spinner.gif') no-repeat 0 0;
+}
+
+.x-form-field-wrap .x-form-spinner-overup{
+    background-position:-17px 0;
+}
+
+.x-form-field-wrap .x-form-spinner-clickup{
+    background-position:-34px 0;
+}
+
+.x-form-field-wrap .x-form-spinner-overdown{
+    background-position:-51px 0;
+}
+
+.x-form-field-wrap .x-form-spinner-clickdown{
+    background-position:-68px 0;
+}
+
+.x-trigger-wrap-focus .x-form-spinner-trigger{
+    background-position:-85px 0;
+}
+
+.x-trigger-wrap-focus .x-form-spinner-overup{
+    background-position:-102px 0;
+}
+
+.x-trigger-wrap-focus .x-form-spinner-clickup{
+    background-position:-119px 0;
+}
+
+.x-trigger-wrap-focus .x-form-spinner-overdown{
+    background-position:-136px 0;
+}
+
+.x-trigger-wrap-focus .x-form-spinner-clickdown{
+    background-position:-153px 0;
+}
+
+.x-trigger-wrap-focus .x-form-trigger{
+    border-bottom: 1px solid #7eadd9;
+}
+
+.x-form-field-wrap .x-form-spinner-splitter {
+	line-height:1px;
+	font-size:1px;
+    background:transparent url('../images/form/spinner-split.gif') no-repeat 0 0;
+	position:absolute;
+	cursor: n-resize;
+}
+
+.x-trigger-wrap-focus .x-form-spinner-splitter{
+    background-position:-14px 0;
+}
+
+/****************************************************************
+	Ext.form.FileUploadField
+*****************************************************************/
+.x-form-file-wrap {
+    position: relative;
+    height: 22px;
+}
+.x-form-file-wrap .x-form-file {
+	position: absolute;
+	right: 0;
+	-moz-opacity: 0;
+	filter:alpha(opacity: 0);
+	opacity: 0;
+	z-index: 2;
+    height: 22px;
+}
+.x-form-file-wrap .x-form-file-btn {
+	position: absolute;
+	right: 0;
+	z-index: 1;
+}
+.x-form-file-wrap .x-form-file-text {
+    position: absolute;
+    left: 0;
+    z-index: 3;
+    color: #777;
+}
+
+/****************************************************************
+	Ext.form.ListView
+*****************************************************************/
+.x-form-combo-label {
+	margin: 2px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.x-form-combo-label img {
+	margin: 0 2px 3px 0; 
+}
+
+.x-combo-list .ext-listview-selected {
+	background-color: #DFE8F6;
+}
+
+.x-combo-list .ext-listview-selected {
+	border: 1px dotted #a3bae9;
+	cursor: pointer;
+}
+
+.ext-listview-over {
+	border: 1px dotted #000000 !important;
+	background-color: #E4E4E3;
+}
+
+.ext-form-checker {
+	width: 14px;
+	height: 14px;
+	vertical-align: middle;
+}
+
+.ext-form-checker {
+    background: url(../images/form/checker.gif) no-repeat 0px 0px;
+}
+
+.x-form-text, textarea.x-form-field {
+	border-color: #B5B8C8;
+}
+
+.x-form-field-wrap .x-form-twin-triggers .ext-form-trigger {
+	position: static;
+	top: auto;
+	vertical-align: top;
+}
+
+.ext-form-trigger {
+	width: 17px;
+	height: 20px;
+	border: 0;
+	border-top: 1px solid #abadb3;
+	border-bottom: 1px solid #abadb3;
+}
+
+.x-trigger-wrap-focus .ext-form-trigger {
+	border-top-color: #02BCFF;
+	border-bottom-color: #02BCFF;
+}
+
+.ext-form-refresh-trigger {
+    /* border-left: 1px solid #abadb3; */
+    /* border-right: 1px solid #abadb3; */
+	cursor: pointer;
+    background: url(../images/form/trigger.gif) no-repeat 0 0;
+}
+
+.ext-form-refresh-hover {
+	cursor: pointer;
+    background: url(../images/form/trigger.gif) no-repeat -68px 0;
+}
+
+.ext-form-clear-trigger {
+	cursor: pointer;
+    background: url(../images/form/trigger.gif) no-repeat -17px 0;
+}
+
+.ext-form-clear-hover {
+	cursor: pointer;
+    background: url(../images/form/trigger.gif) no-repeat -85px 0;
+}
+
+.ext-form-select-trigger {
+	cursor: pointer;
+    background: url(../images/form/trigger.gif) no-repeat -34px 0;
+}
+
+.ext-form-select-trigger-checked {
+	background-position: -51px 0;
+}
+
+.ext-listview-selected .ext-form-checker {
+    background: url(../images/form/checker.gif) no-repeat -25px 0px;
+}
+
+/****************************************************************
+	Ext.form.TreeView
+*****************************************************************/
+.x-combo-list .x-tree-node .x-tree-node-over {
+	/* border: 1px dotted #000000 !important; */
+	background-color: #E4E4E3;
+}
+.x-combo-list .x-tree-node .x-tree-selected {
+	/* border: 1px dotted #a3bae9; */
+	background-color: #D9E8FB;
+}
+
+.ext-tree-node {
+	vertical-align: top;
+	width: 16px;
+	height: 15px;
+	PADDING-TOP: 3px;
+	border: 0 none;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.ext-tree-node-anchor {
+	line-height: 18px;
+	PADDING-LEFT: 3px;
+}
+
+.ext-tree-elbow-line{
+	background-image:url(../images/tree/elbow-line.gif);
+}
+
+.ext-tree-elbow{
+	background-image:url(../images/tree/elbow.gif);
+}
+
+.ext-tree-folder {
+	background-image:url(../images/tree/folder.gif);
+}
+
+
+.ext-node-upward {
+	background-image:url(../images/tree/upward.gif);
+}
+
+.ext-node-refresh {
+	background-image:url(../images/tree/refresh.gif);
+}
+
+.ext-node-downward {
+	background-image:url(../images/tree/downward.gif);
+}
+
+.ext-tree-folder-open {
+	background-image:url(../images/tree/folder-open.gif);
+}
+
+.ext-tree-node-leaf {
+	background-image:url(../images/tree/leaf.gif);
+}
+
+.ext-form .x-panel-btns {
+	background-color: #D5E6F9;
+}
+	
+
+.ext-grid3-row-highligh {
+	background-color: #FFFFAA;
+	border: 1px dash;
+}
+	

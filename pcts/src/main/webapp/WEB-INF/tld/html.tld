@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib 
+	xmlns="http://java.sun.com/xml/ns/j2ee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+	version="2.0">
+
+	<description>PCTS Tag Library</description>
+	<display-name>PCTS Tag</display-name>
+	<tlib-version>1.0</tlib-version>
+	<short-name>Tag</short-name>
+	<uri>/html-tags</uri>
+
+	<tag>
+		<name>jsp</name>
+		<tag-class>com.pcts.common.tag.jsp.JSP</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+
+	<tag>
+		<name>page</name>
+		<tag-class>com.pcts.common.tag.jsp.Page</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+
+	<tag>
+		<name>resource</name>
+		<tag-class>com.pcts.common.tag.jsp.Resource</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+
+	<tag>
+		<name>head</name>
+		<tag-class>com.pcts.common.tag.jsp.Head</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+
+	<tag>
+		<name>body</name>
+		<tag-class>com.pcts.common.tag.jsp.Body</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+
+	<tag>
+		<name>onReady</name>
+		<tag-class>com.pcts.common.tag.jsp.ExtReady</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+
+	<tag>
+		<name>script</name>
+		<tag-class>com.pcts.common.tag.jsp.Script</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<name>src</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>charset</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>css</name>
+		<tag-class>com.pcts.common.tag.jsp.Css</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<name>src</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+</taglib>

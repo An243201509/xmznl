@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta property="qc:admins" content="355116607766207674756375" />
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta name="renderer" content="webkit" />
+<title>登录 - V众投，远离水军的问答社区</title>
+<meta name="keywords" content="众投,实名,远离水军,投票,产品,评价,分成" />
+<meta name="description" content="真诚的回答问题和投票，让生活亮色多一点，同时V众投帮你把它变成小钱。"  />
+<link href="http://vzhongtou.qiniudn.com/static/css/default/img/favicon.png?v=20140621" rel="shortcut icon" type="image/x-icon" />
+
+<link rel="stylesheet" type="text/css" href="http://vzhongtou.qiniudn.com/static/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="http://vzhongtou.qiniudn.com/static/css/font-awesome.css" />
+<link rel="stylesheet" type="text/css" href="http://vzhongtou.qiniudn.com/static/css/aw-font.css" />
+
+<link href="http://vzhongtou.qiniudn.com/static/css/default/common.css?v=20140621" rel="stylesheet" type="text/css" />
+<link href="http://vzhongtou.qiniudn.com/static/css/default/link.css?v=20140621" rel="stylesheet" type="text/css" />
+<link href="http://vzhongtou.qiniudn.com/static/js/plug_module/style.css?v=20140621" rel="stylesheet" type="text/css" />
+<link href="http://vzhongtou.qiniudn.com/static/css/default/login.css?v=20140621" rel="stylesheet" type="text/css" />
+
+<script src="http://vzhongtou.qiniudn.com/static/js/jquery.2.js?v=20140621" type="text/javascript"></script>
+<script src="http://vzhongtou.qiniudn.com/static/js/jquery.form.js?v=20140621" type="text/javascript"></script>
+<script src="http://vzhongtou.qiniudn.com/static/js/plug_module/plug-in_module.js?v=20140621" type="text/javascript"></script>
+<script src="http://vzhongtou.qiniudn.com/static/js/functions.js?v=20140621" type="text/javascript"></script>
+<script src="http://vzhongtou.qiniudn.com/static/js/aw_template.js?v=20140621" type="text/javascript"></script>
+<script src="http://vzhongtou.qiniudn.com/static/js/common.js?v=20140621" type="text/javascript"></script>
+<script src="http://vzhongtou.qiniudn.com/static/js/app.js?v=20140621" type="text/javascript"></script>
+<script src="http://vzhongtou.qiniudn.com/static/js/md5.js?v=20140621" type="text/javascript"></script>
+<script type="text/javascript" src="http://vzhongtou.qiniudn.com/static/js/compatibility.js"></script>
+<script type="text/javascript" src="http://vzhongtou.qiniudn.com/static/js/respond.js"></script>
+</head>
+<body>
+<div id="wrapper" class="clearfix">
+	<div class="aw-login-wrap clearfix">
+		<!-- 登陆框 -->
+		<div class="aw-login-box pull-right">
+			<div class="aw-mod">
+				<div class="aw-mod-head">
+					<a href="http://www.vzhongtou.com/account/register/" class="b-new-user pull-right">注册新用户</a>
+					<i class="fa fa-user"></i>
+					登录
+				</div>
+				<div class="aw-mod-body">
+					<form id="login_form" method="post" onsubmit="return false" action="http://www.vzhongtou.com/account/ajax/login_process/">
+						<input type="hidden" name="return_url" value="http://www.vzhongtou.com/" />
+						<ul>
+							<li>
+								<label class="aw-label-icon pull-left" for="aw-login-user-name"><i class="fa fa-user"></i></label>
+								<input type="text" id="aw-login-user-name" class="form-control" placeholder="邮箱/用户名" name="user_name" />
+							</li>
+							<li>
+								<label class="aw-label-icon pull-left" for="aw-login-user-password"><i class="fa fa-key"></i></label>
+								<input type="password" id="aw-login-user-password" class="form-control" placeholder="密码" name="password" />
+							</li>
+							<li class="alert alert-danger hide">
+								<i class="fa fa-times"></i><em></em>
+							</li>
+							<li class="last">
+								<a href="javascript:;" onclick="ajax_post($('#login_form'), _error_message_form_processer);" id="login_submit" class="pull-right btn btn-large btn-success">登录</a>
+								<input id="login-radio" type="checkbox" value="1" name="net_auto_login" />
+								<label for="login-radio">记住我</label>
+								<a href="http://www.vzhongtou.com/account/find_password/">忘记密码</a>
+							</li>
+						</ul>
+					</form>
+				</div>
+				<div class="aw-mod-footer">
+					<a href="http://www.vzhongtou.com/reader/" class="pull-right">问答阅读<i class="fa fa-chevron-right"></i></a>
+											第三方登录:
+						<a href="http://www.vzhongtou.com/account/openid/sina/" class="icon-sina"></a>
+						<a href="http://www.vzhongtou.com/account/openid/qq_login/" class="icon-qq"></a>															</div>
+			</div>
+		</div>
+		<!-- end 登陆框 -->
+		<!-- 左侧文字介绍部分 -->
+		<h1>
+			<img src="http://vzhongtou.qiniudn.com/static/css/default/img/login_logo.png" alt="V众投，远离水军的问答社区" />
+			<p>真诚的回答问题和投票，让生活亮色多一点，同时V众投帮你把它变成小钱。</p>
+		</h1>
+		<div class="aw-login-state">
+			<p>
+				欢迎来到 <i class="icon-v title=""></i>众投 社区，如果你被各种广告，水军，软文弄的极其烦躁，那么可以尝试在这里寻找客观和真实。			</p>
+			<p class="hide">
+				<i class="icon-v title=""></i>众投 中只有验证用户才可以投票，所以投票结果真实可信。			</p>
+			<p class="hide">
+				<i class="icon-v title=""></i>众投 将和社区共享所有收益。<br /><span>60%的收益将会被分配到个人和社区！</span>
+			</p>
+		</div>
+		<!-- end 左侧文字介绍部分 -->
+		
+		<div class="aw-login-box-bg">
+		</div>
+	</div>
+	<!-- 背景切换 -->
+	<div class="aw-bg-wrap">
+		<ul id="aw-bg-loading">
+			<li style="height: 824px;background-image: url(http://vzhongtou.qiniudn.com/static/css/default/img/login_01.jpg);"></li>
+			<li style="height: 824px;background-image: url(http://vzhongtou.qiniudn.com/static/css/default/img/login_02.jpg);"></li>
+			<li style="height: 824px;background-image: url(http://vzhongtou.qiniudn.com/static/css/default/img/login_03.jpg);"></li>
+		</ul>
+	</div>
+	<!-- end 背景切换 -->
+</div>
+
+<script type="text/javascript" src="http://vzhongtou.qiniudn.com/static/js/app/login.js"></script>
+
+<div class="aw-footer-wrap">
+	<div class="aw-footer aw-wecenter">
+		<a href="http://www.vzhongtou.com/about/" target="blank">关于<i class="icon-v title=""></i>众投</a> -
+		<a href="http://www.vzhongtou.com/article/4" target="blank">关于我们</a> -
+		Copyright © 2015 - <i class="icon-v title=""></i>众投(Beta) - <a href="http://www.miibeian.gov.cn/" target="_blank">苏ICP备14006951</a>, All Rights Reserved<br />
+
+		Powered By <a href="http://www.wecenter.com/?copyright" target="blank">WeCenter 2.5.0</a>
+		
+		当前时区: GMT +8 &nbsp; <a href="http://www.vzhongtou.com/feed/" target="blank"><i class="fa fa-rss-square"></i> RSS Feed</a>
+			</div>
+</div>
+
+
+
+<a href="javascript:;" onclick="$.scrollTo(1, 600, {queue:true});" class="aw-back-top"><i class="fa fa-arrow-up"></i></a>
+
+
+
+<!-- DO NOT REMOVE -->
+<div id="aw-ajax-box" class="aw-ajax-box"></div>
+
+<div style="display:none;" id="__crond">
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#__crond').html(unescape('%3Cimg%20src%3D%22' + G_BASE_URL + '/crond/run/1428030590%22%20width%3D%221%22%20height%3D%221%22%20/%3E'));
+		});
+
+	</script>
+</div>
+
+<!-- Escape time: 0.039761066436768 -->
+<script type="text/javascript" id="bdshare_js" data="type=tools" ></script>
+<!-- / DO NOT REMOVE -->
+
+</body>
+</html>

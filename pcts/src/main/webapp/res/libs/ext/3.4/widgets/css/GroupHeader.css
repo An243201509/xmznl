@@ -1,0 +1,8 @@
+/** Ext.grid.ColumnHeaderGroup **/
+td.grid-hd-group-cell {
+    background: url(../images/grid/grid3-hrow.gif) repeat-x bottom;
+}
+
+td.ux-grid-hd-group-cell {
+    background:  url(../images/grid/grid3-hrow.gif) repeat-x bottom;
+}

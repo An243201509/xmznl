@@ -1,0 +1,207 @@
+/* 重载bootstrap部分 */
+em{font-style: normal;}
+input[type="radio"], input[type="checkbox"]{margin:0;}
+label{margin:0;font-weight: normal;}
+form{margin:0;}
+select, input[type="file"]{line-height: 28px;}
+select{width: auto;}
+.hide{display: none;}
+.tooltip{z-index: 9999;}
+.alert{margin-bottom:0px;padding:8px 14px;background: #FCFDDB;border: 1px solid #F9F2A7;}
+.alert-danger, .alert-error{margin-bottom:10px;background: #F2DEDE;border: 1px solid #EED3D7;}
+.tab-content{padding-bottom:30px;}
+.form-control{line-height: 20px;}
+.form-horizontal .control-label, .form-horizontal .controls{height: 30px;line-height: 30px;padding-top:0;}
+.badge{padding:2px 6px;margin-left: 5px;}
+.badge.badge-info{background: #3A87AD;}
+.badge.badge-important{background: #D90000;}
+.table-bordered > thead > tr > th, .table-bordered > thead > tr > td{border-bottom-width:1px;}
+
+/* modal
+body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom{margin:0;}
+.modal-backdrop, .modal-backdrop.fade.in{filter:alpha(opacity=20);opacity: 0.2; }
+*/
+
+/* 重载bootstrap按钮
+.btn.zt-active{background-color: #5CB85C;border-color:#4CAE4C;color: #FFFFFF;}
+.btn.zt-active:hover{background-color: #47A447; border-color: #398439; }
+.btn-mini{min-width: 70px;min-width:45px;padding:3px 10px;font-size:12px;font-weight: normal;}
+.btn-small{min-width: 80px;padding:2px 6px;}
+.btn-normal{padding:2px 10px;}
+.btn-large{min-width:92px;min-width:62px;font-size:14px;}
+*/
+
+/* tabs切换样式重载 */
+.zt-reset-nav-tabs{position:relative;z-index:1;margin:0;min-height: 30px;}
+.zt-reset-nav-tabs > li{float:right;margin:0 4px 0 0;font-size: 14px;}
+.zt-reset-nav-tabs > li > a{line-height:30px;padding:0 13px;cursor: pointer !important;background-color: #FCFDFF;border: 1px solid #ddd;border-bottom-color: transparent;border-radius: 3px 3px 0 0;}
+.zt-reset-nav-tabs > li > a:hover{background-color: #F5FAFF;border: 1px solid #ddd;border-bottom-color: transparent;}
+.zt-reset-nav-tabs > li.active{margin:0 4px -1px 0;}
+.zt-reset-nav-tabs > li.active a{line-height:31px;background-color: #fff;}
+.zt-reset-nav-tabs h2{position:absolute;top:0;left:0;margin:0;font-size:20px;}
+.zt-reset-nav-tabs .fa-caret-up, .zt-reset-nav-tabs .fa-caret-down{position: relative;top: -2px;margin-left:5px;}
+
+/* 公共部分*/
+html{height: 100%;}
+body{margin: 0;height: 100%;font-size:14px; line-height:160%;color: #666;}
+body, input, button, select, textarea, h1, h2, h3, h4, h5, h6{font-family: "Helvetica Neue",Helvetica,Arial,'Microsoft YaHei',sans-serif;}
+ul, ol{margin:0;padding:0;list-style:none;}
+h1, h2, h3, h4, h5, h6{margin-top:0;font-size:100%;line-height: 20px;}
+dd{margin-left: 10px;}
+a{cursor: pointer;}
+a:hover{text-decoration: none;}
+textarea{resize:none;}
+input, textarea{padding: 6px !important;}
+table td{vertical-align: middle !important;}
+.zt-padding10{padding:10px;}
+.zt-margin-top-10{margin-top:10px;}
+.zt-center{max-width:960px;height:auto;margin:0 auto;}
+.zt-content-wrap{padding-bottom:30px;}
+
+.zt-mod .zt-mod-head h4, .zt-mod .zt-mod-head h4 a{font-size:14px;}
+
+.zt-text-color-999{font-size: 12px;}
+
+/* 分类小标签 */
+.zt-user-name, .zt-topic-name{display:inline-block;display:inline\0;font-size:12px;line-height:20px;font-weight:normal;}
+.zt-topic-name span{display:inline-block;padding:0 6px;background-color:#e0f5ff;}
+.zt-topic-name span:hover{background:#C1E8F9;text-decoration:none;}
+.zt-topic-name .zt-close{margin-left:5px;margin-top:3px;color: #295477;opacity: 1;}
+
+/* mainContent */
+.zt-main-content{height:100%;padding:0 20px 0;margin:0;}
+.zt-content-wrap .zt-all-question{padding-top:20px;}
+.zt-content-wrap .zt-article-list{padding-top:20px;}
+.zt-main-content .zt-all-question .pagination{margin:20px 0 0;}
+
+/* category */
+.category dl, .category dl dt, .category dl dd{float:left;}
+.category dl{position:relative;margin:10px 12px 10px 0;padding:15px;}
+.category dl:hover .zt-drop-down, .category ul li:hover .zt-drop-down, .category dl .zt-drop-down ul li a{display:block;}
+.category dl:hover, .category .category-style > .active{background: #ebebeb;}
+.category dl dt, .category dl dt img{width: 50px;height: 50px;}
+.category dl dd{width:130px;overflow: hidden;}
+.category dl dd span{display:block;height:38px;font-size: 12px;word-wrap:break-word;}
+.category dl .zt-drop-down{top: 110%;left: 0;}
+.category dl .zt-drop-down ul li{padding: 10px;}
+.category dl .zt-drop-down span, .category ul li .zt-drop-down span{position:absolute;top:-10px;display: inline-block;width: 100%;height:10px;}
+.category dl .zt-drop-down span i, .category ul li .zt-drop-down span i{top: 4px;}
+.category .category-style{padding: 0 0 0 10px;}
+.category .category-style.drop-down-menu{top:115%;min-width: 150px;max-height:200px;margin:0;}
+.category .category-style.drop-down-menu ul{max-height:200px;overflow:auto;}
+.category .category-style > ul > li .zt-drop-down-menu{text-align: left;}
+.category .category-style> ul > li{float: left;position:relative;height: 30px;line-height: 30px;margin:7px 5px;padding:0 7px;font-size:14px;text-align: center;cursor: pointer;border-radius: 5px;}
+.category .category-style> ul > li > a{color:#17344A;}
+.category .category-style> ul > li.active, .category .category-style > ul > li:hover{background: #3579a6;}/*#494a4b*/
+.category .category-style> ul > li.active > a, .category .category-style > ul > li:hover > a{color: #fff;}
+.category ul li .zt-drop-down{top:120%;width: 120px;text-align: left;}
+.category ul li .zt-drop-down ul li{padding:10px;line-height: 20px;}
+.category .title a, .category-drop-down a.active{font-weight: bold;}
+
+/* ipad屏幕兼容 */
+@media (max-width: 768px) {
+    .zt-dynamic-topic .zt-item .zt-dynamic-topic-more-operate{display:inline-block;}
+    .zt-copyright{text-align: center !important;}
+    .zt-container-wrap{padding: 0 10px !important;}
+    .zt-copyright{text-align: center !important;}
+    .zt-dynamic-topic .zt-dynamic-topic-content{float: none !important;}
+}
+@media (max-width: 1024px) {
+    .zt-question-detail-box .zt-vote-bar{position: relative !important;left: 0 !important;}
+}
+/* iphone竖屏幕兼容 */
+@media only screen and (device-width:320px){
+    .zt-user-nav{display: none;}
+}
+/* 横屏幕兼容 */
+@media screen and (orientation:landscape) {
+    .zt-user-nav{display: block !important;}
+}
+
+/* top-menu */
+.zt-top-menu-wrap{position:relative;z-index:1001;width:100%;min-height:54px;margin-bottom:30px;background:#3579a6;}
+.zt-top-menu{overflow: visible;}
+.zt-logo{width:120px;height:40px;margin:6px 0 0 0;}
+.zt-logo a{display:block;width: 120px;height: 36px;background:url('') no-repeat;}
+.zt-logo h1{height:25px;line-height:25px;margin:-2px 0 2px 0;font-size:14px;}
+
+.zt-top-nav{width: 380px !important;}
+.zt-top-nav > ul > li{position: relative;float:left;}
+.zt-top-nav > ul > li > a{display:block;height:54px;line-height:54px;padding:0 20px;color: #fff;}
+.zt-top-nav > ul > li > a.active, .zt-login-nav > ul > li a.active:hover{background: #2c618d;}
+.zt-top-nav > ul > li > a:hover{background: #24659a;}
+.zt-top-nav .badge{position: absolute;top: 8px;right: 8px;}
+.zt-top-nav ul li:hover .zt-message-drop-down{display: block;}
+.zt-top-nav .zt-message-drop-down{display:none;position:absolute;left:-95px;top:57px;z-index: 9999;min-width:245px;height: auto;margin:2px 0 0;padding: 5px 0;background-color: #fff;border: 1px solid #C4CDD6;box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);}
+.zt-top-nav .zt-message-drop-down > span{position: absolute;top:-10px;left:0;width: 245px;height: 10px;}
+.zt-top-nav .zt-message-drop-down > span .i-drop-down-triangle{position: relative;left: 122px;top:-5px;}
+.zt-top-nav .zt-message-drop-down ul{font-size: 14px;font-weight: normal;}
+.zt-top-nav .zt-message-drop-down ul a{font-size:12px;font-weight: normal;}
+.zt-top-nav .zt-message-drop-down p, .zt-login-nav .zt-message-drop-down a{margin: 0;}
+.zt-top-nav .zt-message-drop-down .zt-message-drop-down-more{font-size: 12px;}
+.zt-top-nav .zt-message-drop-down ul li{padding:5px 10px;border-top:1px dotted #E2E2E2;}
+.zt-top-nav .zt-message-drop-down ul li:first-child{border-top: none;}
+.zt-top-nav .zt-message-drop-down ul li:hover{background: #F5FAFf;}
+.zt-top-nav .zt-message-drop-down ul li:hover .zt-new-message-tips-close{display: block;}
+.zt-top-nav .zt-message-drop-down ul li .message{display:inline-block;width: 210px;}
+
+.zt-user-nav{position:relative;width:145px;height:54px;line-height: 48px;}
+.zt-user-nav:hover .zw-user-nav-drop-down-list{display: block;}
+.zt-user-nav > a{display:block;height:54px;color: #fff;}
+.zt-user-nav > a img{width: 32px;height: 32px;border-radius: 5px;}
+.zt-user-nav > span > a{display:inline-block;height:54px;line-height:54px;padding:0 12px;color: #fff;}
+.zt-user-nav > span > a:hover{background-color: #24659a;}
+/*top-search*/
+.zt-search-box{
+    width: 264px !important;
+    padding-left: 10px;
+}
+.zt-search-box .input-group{
+    margin-bottom: 10px;
+}
+.zt-search-box .input-group .input-group-addon{
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+.zt-search-box form{
+    margin-top: 10px;
+    margin-right: -8px;
+}
+.zt-search-box form input{
+    width: 210px !important;
+}
+.zt-search-box .zt-drop-down{
+    top: 44px;
+    left: 0;
+    width: 360px;
+}
+.zt-search-box .zt-drop-down .i-drop-down-triangle {
+    position: absolute;
+    top: -6px;
+}
+/*搜索框*/
+.zt-search-box .zt-drop-down p{height: 45px;line-height: 45px;margin:0;padding:0 10px;font-weight: normal;border-top: 1px dotted #E2E2E2;}
+.zt-search-box .zt-drop-down p.search{display: none;}
+.zt-search-box .zt-drop-down p.title{border-top: none;}
+.zt-search-box .zt-drop-down .btn-success{margin-top:10px;}
+.zt-search-box .zt-drop-down .zt-drop-down-list li.question .zt-hide-txt{width: 250px;}
+
+/* 问题列表公共模块 .zt-question-list */
+.zt-question-box-mod .zt-item{position:relative;z-index:0;height:auto;min-height:45px;overflow:hidden;padding:15px 5px 15px 70px;}
+.zt-question-box-mod .zt-item .zt-user-name{display: inline;}
+.zt-question-box-mod .zt-item.active{background-color: #f8fbfd;}
+.zt-question-list{width:100%;height:auto;overflow: hidden;}
+.zt-question-list > div + div{border-top:1px dotted #E2E2E2;}
+/* 问题列表回复统计 */
+.zt-question-list .zt-questoin-content h4{margin:0 0 8px;font-size:14px;}
+.zt-question-list .zt-questoin-content > span, .zt-question-list .zt-questoin-content p span{font-size: 12px;font-weight: normal;color: #999;}
+.zt-question-list .zt-questoin-content .zt-user-name img{max-width: 24px;}
+.zt-question-list .zt-questoin-content p{margin:0;color: #999;}
+.zt-question-list .zt-questoin-content .zt-topic-name{display:inline-block;margin:0 2px 3px;}
+/* 问题列表用户头像 */
+.zt-question-list .zt-item > .zt-user-name{position:absolute;left:10px;top:15px;}
+.zt-question-list .zt-questoin-content .zt-user-name img{width: 24px;height: 24px;}
+/* 问题列表问题标签 */
+.zt-question-tags{margin-right:10px;padding:0 5px 0 10px;background-color:#f2f2f2;cursor:pointer;font-size: 14px;}
+.zt-question-tags:hover{background-color:#dddddd;}

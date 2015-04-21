@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>bootstrap</title>
+<link href="./r/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="./r/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="./r/css/common.css" rel="stylesheet" type="text/css" />
+<script src="./r/js/jquery.min.js" type="text/javascript"></script>
+<script src="./r/js/bootstrap.min.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class="top-menu-wrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-2 col-sm-2 logo hidden-xs">
+					<a href="#"></a>
+				</div>
+				<div class="col-xs-4 col-sm-4 search-box hidden-xs hidden-sm">
+					<form class="navbar-search pull-right" action="#" id="global_search_form" method="post">
+						<div class="input-group">
+							<input class="form-control" type="text" placeholder="search power..." autocomplete="off" name="q" id="search-query" class="search-query" />
+							<div class="input-group-addon" title="搜索" id="global_search_btns" onclick="$('#global_search_form').submit();">
+								<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="col-xs-4 col-sm-4 top-nav">
+					<ul>
+						<li><a href="#" class="active">大厅</a></li>
+						<li><a href="#">心情</a></li>
+						<li><a href="#">活动</a></li>
+						<li><a href="#">...</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-2 col-sm-2 user-nav">
+					<span> 
+						<a href="reg.html">登录</a>
+						<a href="reg.html">注册</a>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-wrap">
+		<div class="container center">
+			<div class="row content-wrap">
+				<div class="col-sm-9 col-md-9 main-content">
+					<div class="row category mod-body">
+						<div class="category-style">
+							<ul>
+								<li class="active"><a href="#">全部</a></li>
+								<li><a href="#">程序员</a></li>
+								<li><a href="#">美女</a></li>
+								<li><a href="#">帅哥</a></li>
+								<li><a href="#">随笔</a></li>
+								<li><a href="#">心情</a></li>
+								<li><a href="#">小清新</a></li>
+								<li><a href="#">动漫</a></li>
+								<li><a href="#">星座</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="all-question">
+						<ul class="nav nav-tabs reset-nav-tabs">
+							<li><a href="#" id="sort_control_hot">热门</a></li>
+							<li><a href="#">推荐</a></li>
+							<li class="active"><a href="#">最新</a></li>
+							<h2 class="hidden-xs">全部</h2>
+						</ul>
+
+						<div class="feed-content">
+							<div class="feed-list">
+								<ul>
+									<li type="3">
+										<div class="feed-user-pto">
+											<a title="Baron丶" href="#" target="_blank"><span></span></a> <img src="./r/images/pto_01.jpg" alt /> <a href="#" class="icon_tag">摄影</a>
+										</div>
+										<div class="feed-con">
+											<span class="feed-list-cor"></span> <span class="feed-list-tag"><a href="#"><span>摄影</span></a></span>
+											<div class="feed-from">
+												<a href="#" target="_blank">Tony</a> <span class="edit-by">采编自</span> <a id="id_01" href="#" target="_blank">Array</a> <a href="#" class="feed-date" style>今天 11:30</a> /*"display: none;"*/
+											</div>
+											<div class="feed-title"></div>
+											<div class="feed-text" id="id_text_01">
+												<div class="longtext_prv">
+													dddd
+													<div>
+														<span></span>
+													</div>
+												</div>
+											</div>
+											<div class="feed-attr">
+												<a class="feed-attr_tran" onclick="alert(1)" href="javascript:void(0)">转载<em>(1)</em></a> <a class="feed-attr_comm" onclick="alert(2)" href="javascript:void(0)">评论<em>(10)</em></a> <a
+													class="feed-attr_like" onclick="alert(3)" href="javascript:void(0)">喜欢<em>(11111)</em></a>
+											</div>
+											<div id="comm_01">
+												<div class="comment">
+													<div class="input">
+														<textarea id="comm_in_01"></textarea>
+														<a class="btn" href="javascript:void(0)" onclick="alter(4)"><span>评价</span></a> <em class="green">你还可以输入<em>140</em>个字
+														</em>
+													</div>
+													<div class="row-line"></div>
+													<ul>
+														<li><span class="pic"><a href="#"><img src="./r/images/pto_sm_01.jpg"></a></span>
+															<p>
+																<a href="#">Array</a>很喜欢你的文字<span>(10分钟前)</span>
+															</p></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li type="3">
+										<div class="feed-user-pto">
+											<a title="Baron丶" href="#" target="_blank"><span></span></a> <img src="./r/images/pto_01.jpg" alt /> <a href="#" class="icon_tag">摄影</a>
+										</div>
+										<div class="feed-con">
+											<span class="feed-list-cor"></span> <span class="feed-list-tag"><a href="#"><span>摄影</span></a></span>
+											<div class="feed-from">
+												<a href="#" target="_blank">Tony</a> <span class="edit-by">采编自</span> <a id="id_01" href="#" target="_blank">Array</a> <a href="#" class="feed-date" style>今天 11:30</a> /*"display: none;"*/
+											</div>
+											<div class="feed-title"></div>
+											<div class="feed-text" id="id_text_01">
+												<div class="longtext_prv">
+													dddd
+													<div>
+														<span></span>
+													</div>
+												</div>
+											</div>
+											<div class="feed-attr">
+												<a class="feed-attr_tran" onclick="alert(1)" href="javascript:void(0)">转载<em>(1)</em></a> <a class="feed-attr_comm" onclick="alert(2)" href="javascript:void(0)">评论<em>(10)</em></a> <a
+													class="feed-attr_like" onclick="alert(3)" href="javascript:void(0)">喜欢<em>(11111)</em></a>
+											</div>
+											<div id="comm_01">
+												<div class="comment">
+													<div class="input">
+														<textarea id="comm_in_01"></textarea>
+														<a class="btn" href="javascript:void(0)" onclick="alter(4)"><span>评价</span></a> <em class="green">你还可以输入<em>140</em>个字
+														</em>
+													</div>
+													<div class="row-line"></div>
+													<ul>
+														<li><span class="pic"><a href="#"><img src="./r/images/pto_sm_01.jpg"></a></span>
+															<p>
+																<a href="#">Array</a>很喜欢你的文字<span>(10分钟前)</span>
+															</p></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div>
+						<ul class="pagination  pull-right">
+							<li class="active"><a href="javascript:;">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">&gt;</a></li>
+							<li><a href="#">&gt;&gt;</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-3 col-md-3 aw-side-bar index-side-bar">
+					<div style="margin-top: 20px">我有话说</div>
+					<div class="aside">
+						<div class="fav-tags">
+							<ul>
+								<li><a href="#"><span>活跃用户</span></a></li>
+								<li><a href="#">黄晓明</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

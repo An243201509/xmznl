@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib 
+	xmlns="http://java.sun.com/xml/ns/j2ee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+	version="2.0">
+
+	<description>PCTS Tag Library</description>
+	<display-name>PCTS Tag</display-name>
+	<tlib-version>1.0</tlib-version>
+	<short-name>Tag</short-name>
+	<uri>/widget-tags</uri>
+	
+	<tag>
+		<name>Container</name>
+		<tag-class>com.pcts.common.tag.layout.Container</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	<tag>
+		<name>container</name>
+		<tag-class>com.pcts.common.tag.layout.Container</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>Directory</name>
+		<tag-class>com.pcts.common.tag.grid.Directory</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	<tag>
+		<name>directory</name>
+		<tag-class>com.pcts.common.tag.grid.Directory</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>LayoutConfig</name>
+		<tag-class>com.pcts.common.tag.layout.LayoutConfig</tag-class>
+		<body-content>empty</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	<tag>
+		<name>layoutConfig</name>
+		<tag-class>com.pcts.common.tag.layout.LayoutConfig</tag-class>
+		<body-content>empty</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>DefaultConfig</name>
+		<tag-class>com.pcts.common.tag.layout.DefaultConfig</tag-class>
+		<body-content>empty</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	<tag>
+		<name>defaultConfig</name>
+		<tag-class>com.pcts.common.tag.layout.DefaultConfig</tag-class>
+		<body-content>empty</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>Panel</name>
+		<tag-class>com.pcts.common.tag.layout.Panel</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>Viewport</name>
+		<tag-class>com.pcts.common.tag.layout.Viewport</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>SearchPanel</name>
+		<tag-class>com.pcts.common.tag.layout.SearchPanel</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>FormPanel</name>
+		<tag-class>com.pcts.common.tag.layout.FormPanel</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>form</name>
+		<tag-class>com.pcts.common.tag.form.Form</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>Search</name>
+		<tag-class>com.pcts.common.tag.container.Search</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	<tag>
+		<name>search</name>
+		<tag-class>com.pcts.common.tag.container.Search</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+
+	<tag>
+		<name>Window</name>
+		<tag-class>com.pcts.common.tag.container.Window</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	<tag>
+		<name>window</name>
+		<tag-class>com.pcts.common.tag.container.Window</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>FieldSet</name>
+		<tag-class>com.pcts.common.tag.container.FieldSet</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	<tag>
+		<name>fieldset</name>
+		<tag-class>com.pcts.common.tag.container.FieldSet</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>param</name>
+		<tag-class>com.pcts.common.tag.jsp.Param</tag-class>
+		<body-content>empty</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	
+	<tag>
+		<name>Toolbar</name>
+		<tag-class>com.pcts.common.tag.container.Toolbar</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	<tag>
+		<name>toolbar</name>
+		<tag-class>com.pcts.common.tag.container.Toolbar</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>toolbar.button</name>
+		<tag-class>com.pcts.common.tag.container.ToolbarButton</tag-class>
+		<body-content>empty</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>Toolbar.Button</name>
+		<tag-class>com.pcts.common.tag.container.ToolbarButton</tag-class>
+		<body-content>empty</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>Form.Button</name>
+		<tag-class>com.pcts.common.tag.form.FormButton</tag-class>
+		<body-content>empty</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>button</name>
+		<tag-class>com.pcts.common.tag.form.Button</tag-class>
+		<body-content>empty</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	<tag>
+		<name>Button</name>
+		<tag-class>com.pcts.common.tag.form.Button</tag-class>
+		<body-content>empty</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>text</name>
+		<tag-class>com.pcts.common.tag.form.InputText</tag-class>
+		<body-content>empty</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	<tag>
+		<name>Text</name>
+		<tag-class>com.pcts.common.tag.form.InputText</tag-class>
+		<body-content>empty</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	<tag>
+		<name>input</name>
+		<tag-class>com.pcts.common.tag.form.InputText</tag-class>
+		<body-content>empty</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+
+	<tag>
+		<name>radioGroup</name>
+		<tag-class>com.pcts.common.tag.form.RadioGroup</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	<tag>
+		<name>RadioGroup</name>
+		<tag-class>com.pcts.common.tag.form.RadioGroup</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>radio</name>
+		<tag-class>com.pcts.common.tag.form.Radio</tag-class>
+		<body-content>empty</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>Radio</name>
+		<tag-class>com.pcts.common.tag.form.Radio</tag-class>
+		<body-content>empty</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>CheckboxGroup</name>
+		<tag-class>com.pcts.common.tag.form.CheckboxGroup</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	<tag>
+		<name>checkboxGroup</name>
+		<tag-class>com.pcts.common.tag.form.CheckboxGroup</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>checkbox</name>
+		<tag-class>com.pcts.common.tag.form.Checkbox</tag-class>
+		<body-content>empty</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	<tag>
+		<name>Checkbox</name>
+		<tag-class>com.pcts.common.tag.form.Checkbox</tag-class>
+		<body-content>empty</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+
+	<tag>
+		<name>ComboBox</name>
+		<tag-class>com.pcts.common.tag.form.ComboBox</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<!-- <tag>
+		<name>multiListBox</name>
+		<tag-class>com.pcts.common.tag.form.MultiListBox</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag> -->
+	
+	<tag>
+		<description>推荐使用listBox</description>
+		<name>listview</name>
+		<tag-class>com.pcts.common.tag.form.ListView</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	<tag>
+		<description>推荐使用listBox</description>
+		<name>ListView</name>
+		<tag-class>com.pcts.common.tag.form.ListView</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	<tag>
+		<name>listBox</name>
+		<tag-class>com.pcts.common.tag.form.ListView</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<description>推荐使用treeBox</description>
+		<name>TreeListView</name>
+		<tag-class>com.pcts.common.tag.form.TreeListView</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	<tag>
+		<description>推荐使用treeBox</description>
+		<name>TreeView</name>
+		<tag-class>com.pcts.common.tag.form.TreeListView</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	<tag>
+		<name>treeBox</name>
+		<tag-class>com.pcts.common.tag.form.TreeListView</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>searchBox</name>
+		<tag-class>com.pcts.common.tag.form.SearchBox</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>calendar</name>
+		<tag-class>com.pcts.common.tag.form.Calendar</tag-class>
+		<body-content>empty</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	<tag>
+		<name>Calendar</name>
+		<tag-class>com.pcts.common.tag.form.Calendar</tag-class>
+		<body-content>empty</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>time</name>
+		<tag-class>com.pcts.common.tag.form.TimeField</tag-class>
+		<body-content>empty</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	<tag>
+		<name>Time</name>
+		<tag-class>com.pcts.common.tag.form.TimeField</tag-class>
+		<body-content>empty</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>fileUpload</name>
+		<tag-class>com.pcts.common.tag.form.FileUpload</tag-class>
+		<body-content>empty</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	<tag>
+		<name>FileUpload</name>
+		<tag-class>com.pcts.common.tag.form.FileUpload</tag-class>
+		<body-content>empty</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+		
+	<tag>
+		<name>ACL</name>
+		<tag-class>com.pcts.common.tag.widget.Authentication</tag-class>
+		<body-content>empty</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>Tree</name>
+		<tag-class>com.pcts.common.tag.tree.Tree</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>tree</name>
+		<tag-class>com.pcts.common.tag.tree.Tree</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>Grid</name>
+		<tag-class>com.pcts.common.tag.grid.Grid</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>grid</name>
+		<tag-class>com.pcts.common.tag.grid.Grid</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>columns</name>
+		<tag-class>com.pcts.common.tag.grid.ColumnGroupHeader</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>column</name>
+		<tag-class>com.pcts.common.tag.grid.Column</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>editor</name>
+		<tag-class>com.pcts.common.tag.grid.ColumnEditor</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>GroupColumn</name>
+		<tag-class>com.pcts.common.tag.grid.GroupColumn</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	<!-- Plug-in -->
+	<tag>
+		<name>Mapper</name>
+		<tag-class>com.pcts.common.tag.grid.mapping.Mapper</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>Plugin.Mapper</name>
+		<tag-class>com.pcts.common.tag.grid.mapping.Mapper</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>Mapper.Proxy</name>
+		<tag-class>com.pcts.common.tag.grid.mapping.HttpProxy</tag-class>
+		<body-content>empty</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>Plugin.Mapper.Proxy</name>
+		<tag-class>com.pcts.common.tag.grid.mapping.HttpProxy</tag-class>
+		<body-content>empty</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>Plugin.ACL</name>
+		<tag-class>com.pcts.common.tag.grid.ACL</tag-class>
+		<body-content>empty</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>operation</name>
+		<tag-class>com.pcts.common.tag.grid.Operation</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+	
+	<tag>
+		<name>Plugin.Operation</name>
+		<tag-class>com.pcts.common.tag.grid.Operation</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>	
+	
+	<!-- <tag>
+		<name>Plugin.RowExpander</name>
+		<tag-class>com.pcts.common.tag.grid.RowExpander</tag-class>
+		<body-content>JSP</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>	 -->
+	
+</taglib>

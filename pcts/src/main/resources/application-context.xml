@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context" 
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+        http://www.springframework.org/schema/tx  http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+        http://www.springframework.org/schema/mvc  http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd">
+	<description>Spring context 公共配置</description>
+	<!-- 定义包扫描路径   <context:component-scan base-package="com.pcts" /> -->
+	
+	<!-- 定义受环境影响易变的变量 -->
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<!-- 标准配置 -->
+			<value>classpath:application.properties</value>
+		</property>
+	</bean>
+	<!-- 加载资源文件  其中包含变量信息，必须在Spring配置文件的最前面加载，即第一个加载
+	<context:property-placeholder location="classpath:application.properties" />-->
+    <bean id="parentDataSource" class="org.logicalcobwebs.proxool.ProxoolDataSource">
+		<property name="driver" value="${connect.driver_class}" />
+		<property name="houseKeepingSleepTime" value="1800000" />
+		<property name="prototypeCount" value="5" />
+		<property name="maximumConnectionCount" value="100" />
+		<property name="minimumConnectionCount" value="5" />
+		<property name="trace" value="true" />
+		<property name="verbose" value="true" />
+		<property name="testBeforeUse" value="true" />
+		<property name="houseKeepingTestSql" value="select 1 from dual" />
+	</bean>
+	
+	<bean id="dataSource" parent="parentDataSource">
+		<property name="alias" value="pcts" />
+		<property name="driverUrl" value="${connect.url}" />
+		<property name="user" value="${connect.username}" />
+		<property name="password" value="${connect.password}" />
+	</bean>
+    
+    <!-- c3p0连接池配置 
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="${jdbc.driverClassName}" />
+		<property name="jdbcUrl" value="${jdbc.url}" />
+		<property name="user" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<property name="autoCommitOnClose" value="true"/>
+		<property name="checkoutTimeout" value="${cpool.checkoutTimeout}"/>
+		<property name="initialPoolSize" value="${cpool.minPoolSize}"/>
+		<property name="minPoolSize" value="${cpool.minPoolSize}"/>
+		<property name="maxPoolSize" value="${cpool.maxPoolSize}"/>
+		<property name="maxIdleTime" value="${cpool.maxIdleTime}"/>
+		<property name="acquireIncrement" value="${cpool.acquireIncrement}"/>
+		<property name="maxIdleTimeExcessConnections" value="${cpool.maxIdleTimeExcessConnections}"/>
+	</bean>
+	-->
+	<!-- SessionFactory配置 -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<!-- 通过注解扫描包的方式 -->
+		<property name="packagesToScan">
+			<list>
+				<value>com.pcts.core</value>
+				<value>com.pcts.znl</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+				<prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
+				<prop key="hibernate.autoReconnect">true</prop>
+			</props>
+		</property>
+    </bean>
+    
+	<!-- 事务管理 -->
+    <bean id="txManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+    <context:annotation-config/>
+	<tx:annotation-driven transaction-manager="txManager" />
+	<!-- 定义包扫描路径 <context:component-scan base-package="com.pcts" />  -->
+	<!-- 对标注 @Autowired 的 Bean 进行自动注入 <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" /> -->
+	<!-- 支持动态代理<aop:aspectj-autoproxy proxy-target-class="true" /> -->
+</beans>

@@ -1,0 +1,91 @@
+.x-treegrid-hd-hidden {
+	visibility: hidden;
+	border: 0;
+	width: 0;
+}
+
+.x-tree-node-bank-expanded {
+	background-image: url("../images/zh_Open.gif");
+}
+
+.x-tree-node-bank-collapsed {
+	background-image: url("../images/zh_Close.gif");
+}
+
+.silk-refresh {
+	background-image: url(../images/arrow_refresh.png) !important;
+}
+
+.silk-expand {
+	background-image: url( ../images/arrow_right.png ) !important;
+}
+
+.silk-expandAll {
+	background-image: url( ../images/bank_close.gif ) !important;
+}
+
+.silk-collapseAll {
+	background-image: url( ../images/bank_open.gif ) !important;
+}
+
+.silk-contract {
+	background-image: url( ../images/arrow_left.png ) !important;
+}
+
+.searchBtnwh1 {
+	background: url(../images/search.gif) no-repeat
+}
+
+.searchBtnwh1 {
+	width: 63px;
+	height: 20px;
+	overflow: hidden;
+	border: 0px;
+}
+
+.searchBtnwh1cz {
+	width: 63px;
+	height: 20px;
+	overflow: hidden;
+	border: 0px;
+}
+
+.searchBtnwh1cz {
+	background: url(../images/search_cz.gif) no-repeat
+}
+
+.searchInputwh1 {
+	width: 80px;
+	height: 16px;
+	padding: 2px;
+	color: #333333;
+}
+
+.Form_btn02 {
+	background: url(../images/Btn_q1.gif) no-repeat
+}
+
+.searchA {
+	display: block;
+	width: 16px;
+	height: 16px;
+	float: left;
+}
+
+.searchSpan1 {
+	float: left;
+	margin: 2px 0px 0px 2px;
+	display: block
+}
+
+.searchA {
+	background: url(../images/magnifier1.gif) no-repeat
+}
+
+.searchA:hover {
+	background: url(../images/magnifier.gif) no-repeat
+}
+
+.x-form-empty-field {
+	color: black;
+}

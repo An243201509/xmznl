@@ -1,0 +1,539 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <title>轻博客</title>
+    <link href="http://simg.sinajs.cn/xblogstyle/css/dialog/report.css" rel="stylesheet" type="text/css">
+    <link href="http://simg.sinajs.cn/xblogstyle/css/common/dashboard.css?2014092401" rel="stylesheet" type="text/css" />
+    <link href="http://simg.sinajs.cn/xblogstyle/css/dialog/addtag.css" rel="stylesheet" type="text/css" />
+    <link href="http://simg.sinajs.cn/xblogstyle/css/dialog/addtag.css" rel="stylesheet" type="text/css" />
+    <link href="http://simg.sinajs.cn/xblogstyle/css/dialog/welcome.css?2014092401" rel="stylesheet" type="text/css" />
+</head>
+<body class="bodyBg dbPage">
+<div class="dbWrapW">
+<div class="dbWrap">
+<div class="container" id="container">
+<div class="logo_bg"></div>
+<div class="top">
+    <div class="logo"><a onclick="xblogLog && xblogLog('A_0006_01_01');" id="logo" href="http://qing.blog.sina.com.cn" title="我的Qing">我的Qing</a></div>
+    <div id="topNav" class="nav">
+        <a onclick="xblogLog && xblogLog('A_0006_01_09');" id="homeNav" href="http://qing.blog.sina.com.cn/home" class="current" >我的首页</a>
+        <a href="http://qing.blog.sina.com.cn/fancy.html" id="topNavFancy">精选</a>
+        <a onclick="xblogLog && xblogLog('A_0006_01_10');" id="explorNav" href="http://qing.blog.sina.com.cn/explore.html"  >推荐</a>
+        <a onclick="xblogLog && xblogLog('A_0006_01_11');" id="discoverNav" href="http://qing.blog.sina.com.cn/discovery.html"  >发现</a>
+        <a onclick="xblogLog && xblogLog('A_0006_01_12');" href="http://qing.blog.sina.com.cn/activity.html">活动</a>
+        <a onclick="xblogLog && xblogLog('A_0006_01_13');" id="messages" tabItemType="11" href="javascript:void(0);" onclick="return false;" >消息</a>
+
+				<span class="uname">
+			<span>
+				<a onclick="xblogLog && xblogLog('A_0006_01_03');" id="nick" href="http://qing.blog.sina.com.cn/2162937404" class="username">
+                    <img src="http://tp1.sinaimg.cn/2162937404/30/5615165461/1" alt="" />丶陪我一起数
+                </a>
+			</span>
+			<span id="nickMenu"><span class="cor" onclick="xblogLog && xblogLog('A_0006_01_04');"></span></span>
+		</span>
+    </div>
+</div>
+<!-- top end -->					<!-- top end -->
+
+<div class="header">
+    <div class="panel" id="theLatest_Head">
+        <div id="christmashead" class="pic">
+            <img src="http://simg.sinajs.cn/xblogstyle/images/common/sg_trans.gif" real_src="http://tp1.sinaimg.cn/2162937404/180/5615165461/1" alt="" width=60 />
+            <a onclick="xblogLog && xblogLog('A_0006_01_02');" title="丶陪我一起数星星" href="http://qing.blog.sina.com.cn/2162937404"><span id='userPortrait' ></span></a>
+        </div>
+        <div class="action">
+            <ul>
+                <li class='b1'><a onclick="xblogLog && xblogLog('A_0006_01_31');"  href="http://qing.blog.sina.com.cn/blog/controllers/post.php?type=text" class="text" id="text" title="博文"><span>博文</span></a></li>
+                <li class='b2'><a onclick="xblogLog && xblogLog('A_0006_01_32');" href="http://qing.blog.sina.com.cn/blog/controllers/post.php?type=pic" class="photo" id="photo" title="照片"><span>照片</span></a></li>
+                <li class='b3'><a onclick="xblogLog && xblogLog('A_0006_01_33');" href="http://qing.blog.sina.com.cn/blog/controllers/post.php?type=video" class="video"  id="video" title="视频"><span>视频</span></a></li>
+                <li class='b4'><a onclick="xblogLog && xblogLog('A_0006_01_34');" href="http://qing.blog.sina.com.cn/blog/controllers/post.php?type=music" class="music"  id="music" title="音乐"><span>音乐</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 我的微薄关系 -->
+    <!-- <div class="host"> <strong>丶陪我一起数星星</strong> <em id="gurl" ><a href="http://qing.blog.sina.com.cn/2162937404">qing.weibo.com/2162937404</a></em> </div>-->
+    <div class="host">
+        <div class="searchFavorite">
+            <div class="bd">
+                <input  onclick="if(this.value=='')this.value='';" type="text" class="ipt" value="" id="searchInput_9i0d" autocomplete="off" tipsholder="" />
+                <input type="button" class="btn" id="searchBtn_9i0d" />
+            </div>
+        </div>
+    </div>
+</div>
+<!-- header end -->
+
+<div class="content">
+<div class="main" id="myFavorite_Body" style="display:none">
+    <!-- feedGroup end -->
+    <div id="myFavoriteTopLoading" class="feedLoading">
+        <p>正在加载，请稍候......</p>
+    </div>
+    <div class="feedList">
+        <ul id="myFavoriteFeedList"></ul>
+    </div>
+    <div id="myFavoriteMoreFeed" class="moreFeed" style="display:none">
+        <p><a href="javascript:void(0)">查看更多</a></p>
+    </div>
+    <div id="myFavoriteFeedLoading" style="display: none;" class="feedLoading"><p>正在加载，请稍候......</p></div>
+</div>
+<div class="main" id="message_Body" style="display:none">
+    <div class="concern">
+        <div class="action">
+            <h2>全部消息</h2>
+        </div>
+    </div>
+    <div class="pmList">
+        <!--导航优化_评论私信-->
+        <div class="feedGroup" id="messageTab" >
+            <ul>
+                <li tabItemType="5" class="current">
+                    <a href="javascript:void(0)" onclick="return false;">评论<span id="cmsNum" class="tip_new"></span></a>
+                </li>
+                <li class=" " tabitemtype="14">
+                    <a href="javascript:void(0)" onclick="return false;">转载<span id="reprintCount" class="tip_new"></span></a>
+                </li>
+                <li tabItemType="11">
+                    <a href="javascript:void(0)" onclick="return false;">喜欢我的<span id="likemineNum" class="tip_new"></span></a>
+                </li>
+                <li tabItemType="6">
+                    <a href="javascript:void(0)" onclick="return false;">私信<span id="pMsgNum" class="tip_new"></span></a>
+                </li>
+                <li tabItemType="7">
+                    <a href="javascript:void(0)" onclick="return false;">通知<span id="systemMsgNum" class="tip_new"></span></a>
+                </li>
+            </ul>
+        </div>
+        <!--/导航优化_评论私信-->
+        <!--导航优化_私信-->
+        <div class="pm_wrap" id="detailPersonalLetter" style="display:none">
+            <!--导航优化_我和某的对话信息-->
+            <div class="pmList_Count">
+                <p>
+                    <span id="detailPersonalLetterCounter"></span>
+											<span class="rtrnMyPm">
+												<a id="detailGoBack" href="javascript:void(0)">返回全部私信&gt;&gt;</a>
+											</span>
+                </p>
+            </div>
+            <!--/导航优化_我和某的对话信息-->
+            <!--/导航优化_私信详情页-->
+            <div id="detailPersonalLetterList" class="pmDetail_list"></div>
+            <!--/导航优化_私信详情页-->
+            <div class="page">
+                <ul id="detailPersonalLetterPage" class="pages"></ul>
+            </div>
+        </div>
+        <!--/导航优化_私信-->
+        <div id="personalLetter" style="display:none" class="pm_wrap">
+            <!--导航优化_已有联系人-->
+            <div class="linkman_num">
+                <p id="personalLetterCounter"></p>
+            </div>
+            <!--/导航优化_已有联系人-->
+            <div class="pmCon">
+                <ul id="personalLetterList"></ul>
+            </div>
+            <div class="page">
+                <ul id="personalLetterPage" class="pages"></ul>
+            </div>
+        </div>
+        <!--/pm_wrap-->
+        <!--导航优化_@我的-->
+        <div id="mentionMeCon" style="display:none;" class="msg_wrap">
+            <div id="mentionMeTopLoading" class="feedLoading" style="display: none; ">
+                <p>正在加载，请稍候......</p>
+            </div>
+            <div class="feedList mention_me">
+                <ul id="mentionMeFeed">
+                </ul>
+            </div>
+            <div id="mentionMeMoreFeed" class="moreFeed" style=" ">
+                <p><a href="javascript:void(0)">查看更多</a></p>
+            </div>
+            <div id="mentionMeFeedLoading" style=" " class="feedLoading"><p>正在加载，请稍候......</p></div>
+        </div>
+        <!--/导航优化_@我的-->
+        <!--导航优化_@我的-->
+        <div id="reprintCon" style="display:none;" class="msg_wrap">
+            <div id="reprintTopLoading" class="feedLoading" style="display: none; ">
+                <p>正在加载，请稍候......</p>
+            </div>
+            <div class="feedList mention_me">
+                <ul id="reprintFeed">
+                </ul>
+            </div>
+            <div id="reprintMoreFeed" class="moreFeed" style=" ">
+                <p><a href="javascript:void(0)">查看更多</a></p>
+            </div>
+            <div id="reprintFeedLoading" style=" " class="feedLoading"><p>正在加载，请稍候......</p></div>
+        </div>
+        <!--/导航优化_@我的-->
+        <!--导航优化_评论-->
+        <div id="commentCon" style="display:none" class="cmmnt_wrap commentsShow">
+            <div class="commentsCon">
+                <ul id="commentList">
+                </ul>
+            </div>
+            <div class="page">
+                <ul class="pages" id="pageSheet">
+                    <li class="SG_pgprev">
+                        <a href="#">上一页</a>
+                    </li>
+                    <li class="SG_pgnext">
+                        <a href="#">下一页</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 翻页 -->
+        </div>
+        <!--/导航优化_评论-->
+        <!--导航优化_喜欢-->
+        <div id="likemineCon" style="display:none" class="cmmnt_wrap commentsShow">
+            <div class="commentsCon">
+                <ul id="likemineList"></ul>
+            </div>
+            <div class="page">
+                <ul class="pages" id="pageSheet_lm"></ul>
+            </div>
+        </div>
+        <!--/导航优化_喜欢-->
+        <!--导航优化_通知-->
+        <div class="commentsShow cmmnt_wrap" id="sytemMsgTab" style="display:none">
+            <div class="commentsCon systemMsg" id="sytemMsgList">
+            </div>
+            <div class="page">
+                <ul class="pages" id="pageList"></ul>
+            </div>
+        </div>
+        <!--/导航优化_通知-->
+    </div>
+    <!-- commentsShow end -->
+</div>
+<!-- 	草稿箱	 -->
+<div class="main draftFeedBox" id="myDrafts_Body" style="display:none">
+    <div class="feedGroup">
+        <ul>
+            <li class="current" type="auto"><a href="#">定时发布(0)</a></li>
+            <li type="draft"><a href="#">草稿(0)</a></li>
+        </ul>
+    </div>
+    <div id="myDraftsTopLoading" class="feedLoading">
+        <p>正在加载，请稍候......</p>
+    </div>
+    <div class="feedList myFeedList">
+        <ul id="myDraftsFeedList">
+        </ul>
+    </div>
+
+    <div id="myDraftsMoreFeed" class="moreFeed" style="display:none">
+        <p><a href="javascript:void(0)">查看更多</a></p>
+    </div>
+    <div id="myDraftsFeedLoading" style="display: none;" class="feedLoading"><p>正在加载，请稍候......</p></div>
+</div>
+<!--  最新动态  -->
+<div class="main" id="theLatest_Body">
+    <!--qing 话题 start-->
+    <div class="QingTopic" id="topicCon" style="display: none;">
+        <div class="bd">
+            <h3>Qing话题</h3>
+            <h4><a onclick="xblogLog && xblogLog('A_0001_03_10');" id="topicUrl" title="昔日的“散片”记录" href="http://qing.blog.sina.com.cn/tag/散片">昔日的“散片”记录</a></h4>
+            <a style="display: none;" id="topicClose" title="关闭" href="javascript:;" class="Q_closeA"></a>
+        </div>
+    </div>
+    <!--qing 话题 end-->
+    <div class="feedGroup">
+        <ul id="theLatestDataTab">
+            <li dataType="1" class="current"><a onclick="xblogLog && xblogLog('A_0006_01_36');" href="javascript:;">Qing</a></li>
+            <li class="sx"></li>
+            <li dataType="0" class="allGroup"><a onclick="xblogLog && xblogLog('A_0006_01_35');" href="javascript:;">微博</a></li>
+        </ul>
+    </div>
+    <div id="theLatestTopLoading" class="feedLoading">
+        <p>正在加载，请稍候......</p>
+    </div>
+    <div style="display: none" id="dynamicTips" class="feedMsgNew" title="">
+        <a href="#" title=""></a>
+    </div>
+    <div style="display: none" id="dynamicTipsWeibo" class="feedMsgNew" title="">
+        <a href="#" title=""></a>
+    </div>
+    <div class="feedList">
+        <ul id="theLatestFeed">
+        </ul>
+    </div>
+    <!-- feedList end -->
+    <div id="moreFeed" class="moreFeed" style="display:none">
+        <p><a href="javascript:void(0)">查看更多</a></p>
+    </div>
+    <!-- moreFeed end -->
+    <div id="theLatestFeedLoading" style="display: none;" class="feedLoading"><p>正在加载，请稍候......</p></div>
+</div>
+<!-- main end -->
+
+<!--  关注我的人 和 我关注的人  -->
+<div class="main" id="attention_Body" style="display:none">
+    <!-- 关注我的人的二级头 -->
+    <div class="concern" id="attentionMe_Head" style="display:none">
+        <div class="action">
+            <h2>我的粉丝0人</h2>
+        </div>
+    </div>
+
+    <!-- 我关注的人 -->
+    <div class="concern" id="myAttention_Head" style="display:none">
+        <div class="feedGroup">
+            <ul>
+                <li type="follows" class="current"><a href="#">我关注的人</a></li>
+                <li type="followtags" class=""><a href="#">我关注的标签</a></li>
+            </ul>
+        </div>
+        <div class="action">
+            <h2>我关注了2人</h2>
+        </div>
+    </div>
+    <!-- 关注我的人的二级头 -->
+
+    <div id="attentionTopLoading" class="feedLoading">
+        <p>正在加载，请稍候......</p>
+    </div>
+    <div class="concernlist">
+        <ul id="attentionContainer"></ul>
+    </div>
+    <div class="page">
+        <ul class="pages" id="page"></ul>
+    </div>
+</div>
+
+<div class="main" id="myPost_Body" style="display:none">
+    <div id="myPostTopLoading" class="feedLoading">
+        <p>正在加载，请稍候......</p>
+    </div>
+    <div class="feedList myFeedList">
+        <ul id="myFeedList">
+        </ul>
+    </div>
+    <div id="myPostMoreFeed" class="moreFeed" style="display:none">
+        <p><a href="javascript:void(0)">查看更多</a></p>
+    </div>
+    <div id="myPostFeedLoading" style="display: none;" class="feedLoading"><p>正在加载，请稍候......</p></div>
+</div>
+
+<!-- 邀请码内容页 -->
+<div id="myInviteCode_Body" class="main" style="display:none">
+</div>
+<!-- main end -->
+<!--/邀请码内容页 -->
+
+<!-- 我的内容页 -->
+<!-- 我的微薄关系 -->
+<div class="aside">
+    <!--右侧菜单组件模板-->
+    <div class="userstates" id="userStates">
+        <ul class="mainSt" id="rightTab">
+            <li class="like hover"><em class="ico_cal365"></em><a onclick="xblogLog && xblogLog('A_0008_01_01');" href="http://qing.blog.sina.com.cn/365/2162937404">我的365</a><a  class="cal365" onclick="xblogLog && xblogLog('A_0008_01_02');"  href="http://qing.blog.sina.com.cn/blog/controllers/post.php?type=text&tag=365">记录今天</a></li>
+            <li class="newest current" tabItemType="0"><em class="ico_news"></em><a onclick="xblogLog && xblogLog('A_0006_01_15');" href="javascript:void(0)">最新动态</a></li>
+            <li class="like" tabItemType="9"><em class="ico_like"></em><a onclick="xblogLog && xblogLog('A_0006_01_16');" href="javascript:void(0)">我的喜欢</a></li>
+            <li id="myBlog" class="myblog"><em class="ico_myblog"></em><a href="javascript:void(0)">我的Qing</a><a onclick="xblogLog && xblogLog('A_0006_01_17');" href="javascript:void(0)" class="switchoff"></a><!--<a href="#" class="switchoff"></a> --></li>
+            <li id="myBlogItems" class="myblog_branch" style="display:none;">
+                <ul>
+                    <li class="top"></li>
+                    <li tabItemType="2" class="article"><em class="ico_article"></em><a onclick="xblogLog && xblogLog('A_0006_01_18');" href="javascript:void(0)">文章<span>0</span>篇</a></li>
+                    <li tabItemType="8" class="draft"><em class="ico_draft"></em><a onclick="xblogLog && xblogLog('A_0006_01_19');" href="javascript:void(0)">草稿<span>0</span>篇</a></li>
+                    <li tabItemType="3" class="fans"><em class="ico_fans"></em><a onclick="xblogLog && xblogLog('A_0006_01_20');" href="javascript:void(0)">粉丝<span>0</span>人</a></li>
+                    <li tabItemType="1" id="myConcern" class="follow"><em class="ico_follow"></em><a onclick="xblogLog && xblogLog('A_0006_01_21');" href="javascript:void(0)">关注<span>2</span>人</a></li>
+                </ul>
+            </li>
+            <li class="btm"></li>
+        </ul>
+
+    </div>
+    <!--/我维护的标签-->
+
+    <div class="favTags">
+        <ul id="myCollectedTags">
+            <li><a href="javascript:void(0);" class="def" onclick="return false;"><span>我关注的标签</span></a><a href="http://qing.blog.sina.com.cn/blog/controllers/helpqa.php#faq6" class="faq" title="FAQ">FAQ</a></li>
+            <li tagattr="小清新"><a onclick="xblogLog && xblogLog('A_0006_01_22');" href="http://qing.blog.sina.com.cn/tag/小清新" target="_blank"><span>小清新</span></a></li>
+            <li tagattr="美图"><a onclick="xblogLog && xblogLog('A_0006_01_22');" href="http://qing.blog.sina.com.cn/tag/美图" target="_blank"><span>美图</span></a></li>
+            <li tagattr="治愈系"><a onclick="xblogLog && xblogLog('A_0006_01_22');" href="http://qing.blog.sina.com.cn/tag/治愈系" target="_blank"><span>治愈系</span></a></li>
+            <li tagattr="365"><a onclick="xblogLog && xblogLog('A_0006_01_22');" href="http://qing.blog.sina.com.cn/tag/365" target="_blank"><span>365</span></a></li>
+            <li tagattr="风景"><a onclick="xblogLog && xblogLog('A_0006_01_22');" href="http://qing.blog.sina.com.cn/tag/风景" target="_blank"><span>风景</span></a></li>
+            <li class="dot"><a href="javascript:void(0);">...</a></li>
+            <li><a href="http://qing.blog.sina.com.cn/home#followtags" target="_blank">查看全部&gt;</a></li>
+        </ul>
+    </div>
+    <!--/我收藏的标签-->
+
+    <div class="favTags">
+        <ul id="hotTags">
+            <li><a href="" class="def" onclick="return false;"><span>热门标签</span></a></li>
+            <li tagattr="美食">
+                <a onclick="xblogLog && xblogLog('A_0006_01_24');" href="http://qing.blog.sina.com.cn/tag/美食" target="_blank"><span>美食</span></a>
+                <span onclick="xblogLog && xblogLog('A_0006_01_25');" class="favTagsAdd" title="收藏标签">收藏</span>
+            </li>
+            <li tagattr="365">
+                <a onclick="xblogLog && xblogLog('A_0006_01_24');" href="http://qing.blog.sina.com.cn/tag/365" target="_blank"><span>365</span></a>
+                <span onclick="xblogLog && xblogLog('A_0006_01_25');" class="favTagsAdd" title="收藏标签">收藏</span>
+            </li>
+            <li tagattr="文学">
+                <a onclick="xblogLog && xblogLog('A_0006_01_24');" href="http://qing.blog.sina.com.cn/tag/文学" target="_blank"><span>文学</span></a>
+                <span onclick="xblogLog && xblogLog('A_0006_01_25');" class="favTagsAdd" title="收藏标签">收藏</span>
+            </li>
+            <li tagattr="心情">
+                <a onclick="xblogLog && xblogLog('A_0006_01_24');" href="http://qing.blog.sina.com.cn/tag/心情" target="_blank"><span>心情</span></a>
+                <span onclick="xblogLog && xblogLog('A_0006_01_25');" class="favTagsAdd" title="收藏标签">收藏</span>
+            </li>
+            <li tagattr="摄影">
+                <a onclick="xblogLog && xblogLog('A_0006_01_24');" href="http://qing.blog.sina.com.cn/tag/摄影" target="_blank"><span>摄影</span></a>
+                <span onclick="xblogLog && xblogLog('A_0006_01_25');" class="favTagsAdd" title="收藏标签">收藏</span>
+            </li>
+            <li tagattr="油画">
+                <a onclick="xblogLog && xblogLog('A_0006_01_24');" href="http://qing.blog.sina.com.cn/tag/油画" target="_blank"><span>油画</span></a>
+                <span onclick="xblogLog && xblogLog('A_0006_01_25');" class="favTagsAdd" title="收藏标签">收藏</span>
+            </li>
+            <li tagattr="文字">
+                <a onclick="xblogLog && xblogLog('A_0006_01_24');" href="http://qing.blog.sina.com.cn/tag/文字" target="_blank"><span>文字</span></a>
+                <span onclick="xblogLog && xblogLog('A_0006_01_25');" class="favTagsAdd" title="收藏标签">收藏</span>
+            </li>
+            <li tagattr="语录">
+                <a onclick="xblogLog && xblogLog('A_0006_01_24');" href="http://qing.blog.sina.com.cn/tag/语录" target="_blank"><span>语录</span></a>
+                <span onclick="xblogLog && xblogLog('A_0006_01_25');" class="favTagsAdd" title="收藏标签">收藏</span>
+            </li>
+            <li tagattr="动物">
+                <a onclick="xblogLog && xblogLog('A_0006_01_24');" href="http://qing.blog.sina.com.cn/tag/动物" target="_blank"><span>动物</span></a>
+                <span onclick="xblogLog && xblogLog('A_0006_01_25');" class="favTagsAdd" title="收藏标签">收藏</span>
+            </li>
+            <li tagattr="时装">
+                <a onclick="xblogLog && xblogLog('A_0006_01_24');" href="http://qing.blog.sina.com.cn/tag/时装" target="_blank"><span>时装</span></a>
+                <span onclick="xblogLog && xblogLog('A_0006_01_25');" class="favTagsAdd" title="收藏标签">收藏</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="activityList">
+        <div class="bd" id="activityList">
+            <a onclick="xblogLog && xblogLog('A_0006_01_26');"  href="http://qing.weibo.com/tag/环游" target="_blank"><img width="16" height="
+																								  16" src="http://www.sinaimg.cn/blog/qing/image/activity/zhaokun/Qing-icon1.png">孤独星球</a>
+            <a onclick="xblogLog && xblogLog('A_0006_01_26');"  href="http://qing.weibo.com/tag/365" target="_blank"><img width="16" height="
+																								  16" src="http://www.sinaimg.cn/blog/qing/image/i3.png">365活动</a>
+            <a onclick="xblogLog && xblogLog('A_0006_01_26');"  href="http://qing.weibo.com/tag/自然" target="_blank"><img width="16" height="
+																								  16" src="http://www.sinaimg.cn/blog/qing/image/activity/zhaokun/valentine.jpg">知识家</a>
+            <a onclick="xblogLog && xblogLog('A_0006_01_26');"  href="http://qing.weibo.com/activity.html" target="_blank"><img width="16" height="
+																								  16" src="http://www.sinaimg.cn/blog/qing/image/i2.png">更多活动</a>
+        </div>
+    </div>
+    <!-- /活动列表 -->
+    <!-- 右侧菜单组件模板-->
+    <!-- userstates end -->
+    <div class="radarPic">
+        <div class="articlePic">
+            <div class="hd"></div>
+            <div class="bd">
+                <div class="panel" style="display:none">
+                    <span onclick="xblogLog && xblogLog('A_0006_01_29');" rel="3258954754" class="follow" id="radar_follow"></span>
+                    <span onclick="xblogLog && xblogLog('A_0006_01_30');" id="radar_transmit" gourl="http://qing.blog.sina.com.cn/reblog/3258954754/c23fb40233003uqx" class="transmit" title="转载"></span>
+
+                </div>
+                <div class ="panel_like">
+                    <span rel="c23fb40233003uqx" blogid="c23fb40233003uqx" class="z_ico_unlike" id="radar_like">162</span>
+                </div>
+                <a onclick="xblogLog && xblogLog('A_0006_01_27');" href="http://qing.blog.sina.com.cn/3258954754/c23fb40233003uqx.html" id="radar_img" target="_blank"><img alt="" src="http://ww1.sinaimg.cn/bmiddle/67b0ce64jw1e3214oqgr7j.jpg"></a>
+            </div>
+            <div class="fd"></div>
+        </div>
+        <div class="userInfo">
+            <a onclick="xblogLog && xblogLog('A_0006_01_28');" href="http://qing.blog.sina.com.cn/u/3258954754" id="radar_profilr_image"><img src="http://tp3.sinaimg.cn/3258954754/50/40019187651/1" alt="" /></a>
+            <div class="txt"><em><a onclick="xblogLog && xblogLog('A_0006_01_28');" href="http://qing.blog.sina.com.cn/u/3258954754" id="radar_name" target="_blank">把爱说成喜欢</a></em><em>来自<span>上海</span></em></div>
+        </div>
+    </div>
+    <!-- recommend end -->
+    <div class="sideFooter">
+        <div class="bd">
+            <a onclick="xblogLog && xblogLog('A_0006_01_38');" id="gblog" href="http://qing.blog.sina.com.cn/sinaqing" target="_blank">官方博客</a>&nbsp;
+            <a onclick="xblogLog && xblogLog('A_0006_01_39');" id="phoneQing" href="http://e.weibo.com/1951657750/messboard" target="_blank">建议</a>&nbsp;
+            <a onclick="xblogLog && xblogLog('A_0006_01_40');" id="helpBottom" href="http://qing.blog.sina.com.cn/blog/controllers/helpqa.php" target="_blank">帮助</a>&nbsp;
+            <a onclick="xblogLog && xblogLog('A_0006_01_41');" id="suggestBottom" href="http://qing.blog.sina.com.cn/about.html" target="_blank">关于</a>
+        </div>
+    </div>
+    <!-- /侧导航标准尾 -->
+</div>
+<!-- aside end -->
+</div>
+
+<!--底部模板组件-->
+<div class="footer">
+    <p><a href="http://qing.blog.sina.com.cn/blog/controllers/helpqa.php" target="_blank">帮助</a> <span>|</span> <a href="http://e.weibo.com/1951657750/messboard" target="_blank">意见反馈</a> <span>|</span> <a href="http://www.sina.com.cn" target="_blank">新浪网导航</a> <span>|</span>  Copyright&copy; &nbsp;&nbsp;1996-2014 SINA新浪公司 版权所有</p>
+    <p>客服电话：4006900000 &nbsp;提示音后按1键(按当地市话标准计费)</p>
+</div>
+<!-- 底部模板组件-->
+
+<!-- footer end -->
+</div>
+<!-- container end -->
+</div>
+</div>
+<div id="nickPanel" class="nav_user" style="top:35px;*top:34px; left:925px; *left:915px; display:block; width:129px;display:none;">
+			<span class="uname">
+				<a class="username" href="http://qing.blog.sina.com.cn/2162937404">
+                    <img src="http://tp1.sinaimg.cn/2162937404/30/5615165461/1" alt="丶陪我一起数星星" />
+                    丶陪我一起数</a>
+				<span class="cor"></span>
+			</span>
+    <ul>
+        <li class="item"><a onclick="xblogLog && xblogLog('A_0006_01_05');" id="myQing" href="http://qing.blog.sina.com.cn/2162937404">我的Qing</a></li>
+        <li class="item"><a onclick="xblogLog && xblogLog('A_0006_01_06');" id="myWeibo" href="http://weibo.com/u/2162937404" target="_blank">我的微博</a></li>
+        <li class="menuLine"></li>
+        <li class="item"><a onclick="xblogLog && xblogLog('A_0006_01_07');" id="mySet" href="/setting.html">设置</a></li>
+        <li class="item"><a onclick="xblogLog && xblogLog('A_0006_01_08');" id="myOut" href="/blog/api/loginout.php">退出</a></li>
+    </ul>
+</div>
+<!-- nav_user end -->
+<script type="text/javascript">
+    var scope = {
+        $setDomain : true,
+        $uid : "2162937404",
+        $name: "丶陪我一起数星星",
+        $followers_count: "0",
+        $friends_count: "2",
+        $headPic:"http://tp1.sinaimg.cn/2162937404/180/5615165461/1",
+        $PRODUCT_NAME : "xblog",
+        $pageid : "index",
+        $heartBeatId : "22001",
+        $newUser: 0,
+        $since_id:"1",
+        $inviteCodeToatl:0,
+        $atten:0,
+        $isMark:"0",
+        $gender:"m",
+        $editorbox:"",
+        $isEditor:false,
+        $manage_tag_name:"",
+        $topicName : "1364542478",				$isActSinceDay:"",
+        $isAct:"",
+        $editorWelcomeEnd:"2012/11/20"
+    };
+</script>
+<script type="text/javascript" src="http://sjs.sinajs.cn/xblog/dashboardInit.js?2014092401"></script>
+<!-- nav_user end -->
+<!--玩转轻博客-->
+<div class="qingHelp">
+    <a href="/blog/controllers/helpcapture.php">收集工具</a>
+</div>
+<!--end玩转轻博客-->
+<script type="text/javascript" src="http://sjs.sinajs.cn/xblog/index.js?v=2014092401"></script>
+
+<!-- SUDA_CODE_START -->
+<noscript>
+    <img width="0" height="0" src="http://beacon.sina.com.cn/a.gif?noScript" border="0" alt="noScript" />
+</noscript>
+<!-- SUDA_CODE_END -->
+<script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F9884a49d64aa508ef2774987eea81d8f' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>
