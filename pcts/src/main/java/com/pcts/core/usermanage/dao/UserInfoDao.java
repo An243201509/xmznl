@@ -1,7 +1,7 @@
 package com.pcts.core.usermanage.dao;
 
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import com.pcts.common.base.dao.BaseDao;
 import com.pcts.core.usermanage.entity.UserInfo;
@@ -14,7 +14,7 @@ import com.pcts.core.usermanage.entity.UserInfo;
  *
  *	用户信息
  */
-@Component
+@Repository
 public class UserInfoDao extends BaseDao<UserInfo> {
 
 	@Override

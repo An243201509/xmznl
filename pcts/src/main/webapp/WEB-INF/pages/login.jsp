@@ -91,7 +91,7 @@
 				<div class="page-header">
 					<h2>个人核心技术系统-用户登录</h2>
 				</div>
-				<form id="defaultForm" action="<%=basePath%>/backstage/login" method="post"
+				<form id="defaultForm" action="<%=basePath%>backstage/login" method="post"
 					class="form-horizontal">
 					<div class="form-group">
 						<label class="col-lg-3 control-label">用户名</label>
@@ -104,7 +104,7 @@
 					<div class="form-group">
 						<label class="col-lg-3 control-label">密码</label>
 						<div class="col-lg-5">
-							<input type="password" class="form-control" name="password" value="111111"/>
+							<input type="password" class="form-control" name="password" value="pwd123"/>
 						</div>
 					</div>
 

@@ -5,6 +5,8 @@ package com.pcts.core.sysmanage.service;
 
 import java.util.Map;
 
+import org.springframework.stereotype.Service;
+
 import com.pcts.core.usermanage.entity.UserInfo;
 
 /**
@@ -13,6 +15,7 @@ import com.pcts.core.usermanage.entity.UserInfo;
  *  <b>Description<b><p>
  *	
  */
+@Service
 public abstract interface LoginUserService {
 	
 	

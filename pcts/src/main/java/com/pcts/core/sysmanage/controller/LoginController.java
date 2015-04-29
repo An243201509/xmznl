@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.pcts.core.sysmanage.service.LoginService;
 import com.pcts.core.sysmanage.service.LoginUserService;
 
 /**
@@ -21,6 +22,9 @@ import com.pcts.core.sysmanage.service.LoginUserService;
  */
 @Controller
 public class LoginController {
+	
+	@Autowired
+	private LoginService loginService;
 	
 	@Autowired
 	private LoginUserService loginUserService;
@@ -55,15 +59,22 @@ public class LoginController {
 	public ModelAndView handleRequestInternal(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		String loginname = request.getParameter("loginname");
 		String password = request.getParameter("password");
+		String error= "";
 	    if(loginname != null){
+	    	String errorCode = loginService.login(loginname, password);
+	    	if(errorCode != null){
+	    		error = ErrorCode.getErrorMessage(errorCode);
+		    	request.setAttribute("loginError", error);
+		        return new ModelAndView("login");
+	    	}else{
+	    		return new ModelAndView("homepage");
+	    	}
 	    	
 	    }else{
-//	    	String error = ErrorCode.getErrorMessage("username.neq");
-//	    	request.setAttribute("loginError", error);
+	    	error = ErrorCode.getErrorMessage("username.neq");
+	    	request.setAttribute("loginError", error);
 	        return new ModelAndView("login");
 	    }
-
-		return null;
 	}
 
 	/**
