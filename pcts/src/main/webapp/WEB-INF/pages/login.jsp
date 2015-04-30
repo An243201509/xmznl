@@ -96,8 +96,8 @@
 					<div class="form-group">
 						<label class="col-lg-3 control-label">用户名</label>
 						<div class="col-lg-5">
-							<input type="text" class="form-control" name="loginname"
-								id="loginname" value="admin" />
+							<input type="text" class="form-control" name="username"
+								id="username" value="admin" />
 						</div>
 					</div>
 

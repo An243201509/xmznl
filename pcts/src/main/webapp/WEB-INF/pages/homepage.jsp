@@ -1,7 +1,13 @@
+<%@page import="com.pcts.core.userinfo.entity.UserInfo"%>
+<%@page import="com.pcts.core.portal.entity.PortalMenu"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":"
 			+ request.getServerPort() + request.getContextPath() + "/";
+	List<PortalMenu> portalMenus =(List<PortalMenu>)request.getAttribute("portalMenus");
+	
+	UserInfo userInfo = (UserInfo)request.getSession().getAttribute("userInfo");
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -11,7 +17,7 @@
 	<meta http-equiv="pragma" content="no-cache"/>
 	<meta http-equiv="cache-control" content="no-cache"/>
 	<meta http-equiv="expires" content="0"/>  
-	<title>Pcts Management</title>
+	<title>后台管理</title>
 	<link type="text/css" rel="stylesheet" href="<%=basePath %>res/libs/ext/3.4/resources/css/ext-all.css" />
 	<link type="text/css" rel="stylesheet" href="<%=basePath %>res/css/homepage.css" />
 	<script type="text/javascript" src="<%=basePath %>res/libs/ext/3.4/adapter/ext/ext-base.js"></script>
@@ -23,19 +29,28 @@
 				funcname:'首页',
 				description:'个人核心技术系统-ZhangTao.工作室出品',
 				odr:0
-			}],
+			}
+			<%for(PortalMenu menu : portalMenus){ %>
+			,{
+				isCustom:true,
+				id:'<%=menu.getId() %>',
+				funcname:'<%=menu.getFuncname() %>',
+				description:'<%=menu.getDescription() %>',
+				odr:<%=menu.getOdr() %>}
+			<%}%>
+			],
 			//门户路径
 			contextPath:'<%=basePath%>',
 			//门户页面路径
-			pagePath:'<%=basePath%>pages/',
+			pagePath:'<%=basePath%>WEB-INF/pages/',
 			//门户图片路径
 			imgPath:'<%=basePath %>res/images/',
 			//当前登录用户id
-			userId:'<s:property value="userid" escape="false" />',
+			userId:'<%=userInfo.getId() %>',
 			//当前登录用户名
-			loginName:'<s:property value="loginname" escape="false" />',
+			loginName:'<%=userInfo.getUsername() %>',
 			//当前登录用户姓名
-			userName:'<s:property value="username" escape="false" />',
+			userName:'<%=userInfo.getName() %>',
 			//是否启用Ukey
 			ukey:false,
 			silent:false

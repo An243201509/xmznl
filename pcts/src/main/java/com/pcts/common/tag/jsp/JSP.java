@@ -8,21 +8,15 @@ import com.pcts.common.tag.container.Container;
 import com.pcts.common.tag.widget.PluginMgr;
 import com.pcts.common.tag.widget.PluginRegister;
 import com.pcts.common.util.WebUtil;
-import com.pcts.core.usermanage.entity.UserInfo;
+import com.pcts.core.userinfo.entity.UserInfo;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Hashtable;
-import java.util.Locale;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
-import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.jsp.PageContext;
-import javax.servlet.jsp.tagext.BodyContent;
 
 /**
  * @author zhangtao, 2014年10月30日 下午11:09:58
@@ -54,7 +48,7 @@ public class JSP extends Container implements PluginRegister {
 		userInfo = (UserInfo)request.getAttribute("userInfo");
 		if (userInfo == null) {
 			userid = userInfo.getId();
-			username = userInfo.getUserName();
+			username = userInfo.getUsername();
 		}
 		if (locale == null) {
 			locale = "zh_CN";

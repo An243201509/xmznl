@@ -64,7 +64,7 @@
 				{"xtype":"numbercolumn","sortable":true,"width":160,"dataIndex":"sn","header":"状态"}],
 			"pageSize":30,
 			"useCRUDColumn":false,
-			"url":"<%= basePath %>/system/user_info!list.action",
+			"url":"<%= basePath %>system/user_info!list.action",
 			"id":"grid",
 			"multiSelect":true,
 			"useRowNumberColumn":true,
