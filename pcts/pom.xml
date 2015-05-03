@@ -11,9 +11,11 @@
   <properties>
 
 		<!-- Generic properties -->
-		<java.version>1.6</java.version>
+		<java.version>1.7</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<ehcache.version>2.6.9</ehcache.version>
+		<shiro.version>1.2.3</shiro.version>
   </properties>
   
   <dependencies>
@@ -275,7 +277,34 @@
 		<version>2.3.2-b01</version>
 		<scope>compile</scope>
 	</dependency>
-	
+	<dependency>
+		<groupId>net.sf.ehcache</groupId>
+		<artifactId>ehcache-core</artifactId>
+		<version>${ehcache.version}</version>
+	</dependency>
+
+	<!-- SECURITY begin -->
+	<dependency>
+		<groupId>org.apache.shiro</groupId>
+		<artifactId>shiro-core</artifactId>
+		<version>${shiro.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.shiro</groupId>
+		<artifactId>shiro-spring</artifactId>
+		<version>${shiro.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.shiro</groupId>
+		<artifactId>shiro-web</artifactId>
+		<version>${shiro.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.shiro</groupId>
+		<artifactId>shiro-ehcache</artifactId>
+		<version>${shiro.version}</version>
+	</dependency>
+	<!-- SECURITY end -->
 	
   </dependencies>
 
@@ -376,9 +405,9 @@
 			  <artifactId>jetty-maven-plugin</artifactId>
 			  <version>9.3.0.M2</version>
 			  <configuration>
-			    <scanIntervalSeconds>10</scanIntervalSeconds>
+			    <scanIntervalSeconds>1000000</scanIntervalSeconds>
 			    <webApp>
-			      <contextPath>/patc</contextPath>
+			      <contextPath>/pcts</contextPath>
 			    </webApp>
 			    <loginServices>
 			      <loginService implementation="org.eclipse.jetty.security.HashLoginService">
