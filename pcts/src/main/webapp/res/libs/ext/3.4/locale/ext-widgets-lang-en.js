@@ -84,7 +84,6 @@ if (Ext.form.BasicForm) {
 			wait : "Waiting...",
 			waitTitle : "Confirm Message"
 		},
-		inValidText : "InValid Form"
 		inValidText : "InValid Form, Please Check Input."
 	});
 };

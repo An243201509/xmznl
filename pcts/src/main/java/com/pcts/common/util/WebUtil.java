@@ -48,7 +48,7 @@ public class WebUtil {
 	 * @return
 	 */
 	public static String getRealPath(HttpServletRequest request, String path) {
-		String realPath = request.getSession().getServletContext().getContextPath();
+		String realPath = "";//request.getSession().getServletContext().getContextPath();
 		if ((!"".equals(path)) && ("/".equals(path.substring(0, 1)))) {
 			realPath = realPath + path.substring(1);
 	    } else {
