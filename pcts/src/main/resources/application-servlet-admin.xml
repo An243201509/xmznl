@@ -24,10 +24,55 @@
 	    </property>
 	</bean>
  
-	<!-- 视图解析器 -->
+	<!-- 视图解析器 
     <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
 		<property name="prefix" value="/WEB-INF/pages/"/>
 		<property name="suffix" value=".jsp"/>
+	</bean>-->
+
+    <!-- velocity 配置 -->
+	<bean id="velocityConfig"
+		class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+		<property name="resourceLoaderPath" value="/WEB-INF/pages/" />
+		<property name="velocityProperties">
+			<props>
+				<prop key="resource.loader">file</prop>
+				<!-- <prop key="file.resource.loader.class">
+					com.pcts.common.util.KindFileResourceLoader
+				</prop> -->
+			<!-- 	<prop key="file.resource.loader.path">/WEB-INF/pages/</prop> -->
+				<prop key="file.resource.loader.cache">false</prop>
+				<prop key="input.encoding">UTF-8</prop>
+				<prop key="output.encoding">UTF-8</prop>
+				<prop key="contentType">text/html;charset=UTF-8</prop>
+			</props>
+		</property>
 	</bean>
+
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
+		<property name="cache" value="false" />
+		<property name="prefix" value="" />
+		<property name="suffix" value=".vm" />
+		<property name="contentType" value="text/html;charset=UTF-8"></property> 
+		<!-- <property name="toolboxConfigLocation" value="/WEB-INF/toolbox.xml" /> -->
+		<property name="order" value="0" />
+	</bean>
+	
+	<!-- <mvc:view-resolvers>
+		<mvc:content-negotiation use-not-acceptable="true">
+	    	<mvc:default-views>	    		
+	      		<bean class="org.springframework.web.servlet.view.velocity.VelocityLayoutView">
+	      		</bean>
+	    	</mvc:default-views>
+	  	</mvc:content-negotiation>
+	
+	  	
+	  	<mvc:velocity prefix="" suffix=".vm" />
+	  	<mvc:bean-name></mvc:bean-name>
+	</mvc:view-resolvers>
+	
+	<mvc:velocity-configurer resource-loader-path="/WEB-INF/view/,classpath:velocity.properties"  /> -->
+	
 </beans>

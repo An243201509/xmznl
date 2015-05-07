@@ -88,4 +88,14 @@
 	<!-- 定义包扫描路径 <context:component-scan base-package="com.pcts" />  -->
 	
 	<!-- 支持动态代理<aop:aspectj-autoproxy proxy-target-class="true" /> -->
+	
+	<!-- ibatis -->
+	<bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+		<property name="configLocation" value="classpath:sqlmap/mybatis-config.xml" />
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<!-- spring jdbc template -->
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
 </beans>
