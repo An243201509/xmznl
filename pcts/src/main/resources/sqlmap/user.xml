@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+<sqlMap namespace="Account">
+
+    <resultMap id="result" class="com.pcts.core.userinfo.entity.UserInfo">
+      <result property="username" column="username" columnIndex="1"/>
+      <result property="name" column="name" columnIndex="2"/>
+      <result property="password" column="password" columnIndex="3"/>
+  </resultMap>
+
+  <select id="getUserForList" resultMap="result">
+    select ACCOUNT.NAME, ACCOUNT.EMAIL
+    from ACCOUNT
+    where ACCOUNT.EMAIL = #value#
+  </select>
+
+  <insert id="insertUser">
+    insert into user (id,  user_id,  user_name,  user_password ) values (#id#, #userId#, #userName#, #userPassword#)
+  </insert>
+
+</sqlMap>
