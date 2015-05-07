@@ -264,6 +264,12 @@
 	<dependency>
 		<groupId>com.cloudhopper.proxool</groupId>
 		<artifactId>proxool</artifactId>
+		<exclusions>
+			<exclusion>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+			</exclusion>
+		</exclusions>
 		<version>0.9.1</version>
 	</dependency>
 	<dependency>
@@ -275,7 +281,7 @@
 		<groupId>javax.servlet.jsp</groupId>
 		<artifactId>javax.servlet.jsp-api</artifactId>
 		<version>2.3.2-b01</version>
-		<scope>compile</scope>
+		<scope>provided</scope>
 	</dependency>
 	<dependency>
 		<groupId>net.sf.ehcache</groupId>
@@ -305,6 +311,27 @@
 		<version>${shiro.version}</version>
 	</dependency>
 	<!-- SECURITY end -->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-ibatis</artifactId>
+		<version>2.0.8</version>
+	</dependency>
+	<dependency>
+       <groupId>org.apache.velocity</groupId>
+       <artifactId>velocity</artifactId>
+       <version>1.7</version>
+    </dependency>
+	<dependency>
+		<groupId>org.apache.velocity</groupId>
+		<artifactId>velocity-tools</artifactId>
+		<version>2.0</version>
+	</dependency>
+	<dependency>
+		<groupId>opensymphony</groupId>
+		<artifactId>sitemesh</artifactId>
+		<version>2.4.2</version>
+	</dependency>
+	
 	
   </dependencies>
 
